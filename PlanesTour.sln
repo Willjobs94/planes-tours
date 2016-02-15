@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlanesTour", "PlanesTour\Pl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlanesTour.Core", "PlanesTour.Core\PlanesTour.Core.csproj", "{7A9F6E73-1DFE-4E97-90E0-4F8CC9BF4C2F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlanesTour.Data", "PlanesTour.Data\PlanesTour.Data.csproj", "{65404040-F360-4370-AC61-69F1C8AD1ABA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{7A9F6E73-1DFE-4E97-90E0-4F8CC9BF4C2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7A9F6E73-1DFE-4E97-90E0-4F8CC9BF4C2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7A9F6E73-1DFE-4E97-90E0-4F8CC9BF4C2F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65404040-F360-4370-AC61-69F1C8AD1ABA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65404040-F360-4370-AC61-69F1C8AD1ABA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65404040-F360-4370-AC61-69F1C8AD1ABA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65404040-F360-4370-AC61-69F1C8AD1ABA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

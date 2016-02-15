@@ -24,7 +24,7 @@ namespace PlanesTour.Core.Domain
         /// <summary>
         /// Short description of what the hotel can offer to the clients
         /// </summary>
-        [MaxLength(1000)]
+        [MaxLength(300)]
         public string Description { get; set; }
         #endregion
 

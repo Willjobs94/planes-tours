@@ -1,6 +1,6 @@
 ﻿namespace PlanesTour.Core.Domain
 {
-    class Child : EntityBase
+   public class Child : EntityBase
     {
         /// <summary>
         /// The age of the child

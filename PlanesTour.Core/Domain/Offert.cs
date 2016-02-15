@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace PlanesTour.Core.Domain
 {
-    class Offert : EntityBase
+    public class Offert : EntityBase
     {
         /// <summary>
         /// Hotel in which the offer applies 

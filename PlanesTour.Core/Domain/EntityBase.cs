@@ -5,7 +5,7 @@ namespace PlanesTour.Core
     /// <summary>
     /// Where inherit all system classes, avoid duplucation and helps to keep the models clean
     /// </summary>
-    public class EntityBase
+    public abstract class EntityBase
     {
         protected EntityBase ()
         {

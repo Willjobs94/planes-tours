@@ -1,6 +1,6 @@
 ﻿namespace PlanesTour.Core.Domain
 {
-    class Photo : EntityBase
+    public class Photo : EntityBase
     {
         /// <summary>
         /// The path of the photo

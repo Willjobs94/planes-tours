@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace PlanesTour.Core.Domain
 {
-    class Hotel : EntityBase
+    public class Hotel : EntityBase
     {
         #region Properties
         /// <summary>

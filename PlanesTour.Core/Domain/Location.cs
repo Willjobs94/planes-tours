@@ -1,6 +1,6 @@
 ﻿namespace PlanesTour.Core.Domain
 {
-    class Location : EntityBase
+    public class Location : EntityBase
     {
         /// <summary>
         /// The location name 

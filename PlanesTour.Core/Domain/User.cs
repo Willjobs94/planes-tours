@@ -2,7 +2,7 @@
 
 namespace PlanesTour.Core.Domain
 {
-    class User : EntityBase
+    public class User : EntityBase
     {
         #region Properties
         /// <summary>

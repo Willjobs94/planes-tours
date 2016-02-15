@@ -4,6 +4,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using PlanesTour.Core.Domain;
 
 namespace PlanesTour.Data
 {
@@ -14,6 +15,8 @@ namespace PlanesTour.Data
         {
 
         }
-        
+
+        public DbSet<User> Users { get; set; }
+
     }
 }

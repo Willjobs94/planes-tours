@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace PlanesTour.Core.Domain
 {
-    class Reservation : EntityBase
+    public class Reservation : EntityBase
     {
         #region Properties
         /// <summary>

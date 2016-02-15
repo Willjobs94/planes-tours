@@ -26,9 +26,14 @@ namespace PlanesTour.Core.Domain
         /// </summary>
         [MaxLength(300)]
         public string Description { get; set; }
+
+        /// <summary>
+        /// Indicates how many times this hotel link have been visited
+        /// </summary>
+        public int ViewCount { get; set; }
         #endregion
 
-        #region Property References
+        #region Navigation Properties
         /// <summary>
         /// Photo Entity Asociated with the hotel
         /// </summary>

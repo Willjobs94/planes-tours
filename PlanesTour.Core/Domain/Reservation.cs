@@ -7,6 +7,11 @@ namespace PlanesTour.Core.Domain
     {
         #region Properties
         /// <summary>
+        /// Indicates in which hotel the user wants to make the reservation
+        /// </summary>
+        public int HotelId { get; set; }
+
+        /// <summary>
         /// Indecates since when the user wants to make the reservation 
         /// </summary>
         public DateTime CheckInDate { get; set; }
@@ -30,6 +35,10 @@ namespace PlanesTour.Core.Domain
         /// In case of children, the age of each one
         /// </summary>
         public  List<Child> Children { get; set; }
+        #endregion
+
+        #region Navigation Properties
+        public Hotel Hotel { get; set; }
         #endregion
     }
 }

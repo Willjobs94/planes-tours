@@ -9,6 +9,11 @@ namespace PlanesTour.Data
 {
     public class PlanesTourDbContext : DbContext
     {
+        public PlanesTourDbContext()     
+            : base ("LocalConnection")
+        {
 
+        }
+        
     }
 }

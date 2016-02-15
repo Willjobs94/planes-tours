@@ -2,7 +2,7 @@
 
 namespace PlanesTour.Core.Domain
 {
-    public class FeedBack
+    public class FeedBack : EntityBase
     {
         #region Properties
         /// <summary>

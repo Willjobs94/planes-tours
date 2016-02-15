@@ -49,6 +49,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Migrations\201602150337036_Initial.cs" />
+    <Compile Include="Migrations\201602150337036_Initial.Designer.cs">
+      <DependentUpon>201602150337036_Initial.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="PlanesTourDbContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -62,6 +66,11 @@
       <Project>{7a9f6e73-1dfe-4e97-90e0-4f8cc9bf4c2f}</Project>
       <Name>PlanesTour.Core</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201602150337036_Initial.resx">
+      <DependentUpon>201602150337036_Initial.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

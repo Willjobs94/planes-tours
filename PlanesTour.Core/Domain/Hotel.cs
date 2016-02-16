@@ -19,7 +19,7 @@ namespace PlanesTour.Core.Domain
         /// <summary>
         /// Users feedBacks of the hotel
         /// </summary>
-        public List<FeedBack> FeedBacks { get; set; }
+        public List<Feedback> FeedBacks { get; set; }
 
         /// <summary>
         /// Short description of what the hotel can offer to the clients

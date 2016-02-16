@@ -43,7 +43,7 @@
   <ItemGroup>
     <Compile Include="Domain\Child.cs" />
     <Compile Include="Domain\EntityBase.cs" />
-    <Compile Include="Domain\FeedBack.cs" />
+    <Compile Include="Domain\Feedback.cs" />
     <Compile Include="Domain\Hotel.cs" />
     <Compile Include="Domain\Location.cs" />
     <Compile Include="Domain\Offert.cs" />

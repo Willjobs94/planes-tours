@@ -2,7 +2,7 @@
 
 namespace PlanesTour.Core.Domain
 {
-    public class FeedBack : EntityBase
+    public class Feedback : EntityBase
     {
         #region Properties
         /// <summary>
@@ -14,6 +14,20 @@ namespace PlanesTour.Core.Domain
         /// Short reason about why a particular user gives an hotel the that score
         /// </summary>
         public string Description { get; set; }
+
+        /// <summary>
+        /// The hotel that the feedback is asociated with
+        /// </summary>
+        public int HotelId { get; set; }
+
+        /// <summary>
+        /// Indicates is a feedback have been aproved for the admin to be shown
+        /// </summary>
+        public bool isAproved { get; set; }
+        #endregion
+
+        #region Navigation Properties
+        public Hotel Hotel { get; set; }
         #endregion
     }
 }

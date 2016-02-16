@@ -11,7 +11,7 @@ namespace PlanesTour.Data
 
         }
 
-        public DbSet<FeedBack> FeedBacks { get; set; }
+        public DbSet<Feedback> FeedBacks { get; set; }
         public DbSet<Location> Locations { get; set; }
         public DbSet<Hotel> Hotels { get; set; }
         public DbSet<Offert> Offerts { get; set; }

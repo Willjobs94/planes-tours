@@ -53,6 +53,10 @@
     <Compile Include="Migrations\201602150337036_Initial.Designer.cs">
       <DependentUpon>201602150337036_Initial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201602160022555_AddMissedReferences.cs" />
+    <Compile Include="Migrations\201602160022555_AddMissedReferences.Designer.cs">
+      <DependentUpon>201602160022555_AddMissedReferences.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="PlanesTourDbContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -70,6 +74,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201602150337036_Initial.resx">
       <DependentUpon>201602150337036_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201602160022555_AddMissedReferences.resx">
+      <DependentUpon>201602160022555_AddMissedReferences.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

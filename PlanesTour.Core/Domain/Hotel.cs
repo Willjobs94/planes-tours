@@ -6,10 +6,16 @@ namespace PlanesTour.Core.Domain
     public class Hotel : EntityBase
     {
         #region Properties
+
         /// <summary>
         /// The identifier of the location
         /// </summary>
         public int LocationId { get; set; }
+
+        /// <summary>
+        /// Name of the hotel
+        /// </summary>
+        public string  Name { get; set; }
 
         /// <summary>
         /// Photos of the hotel

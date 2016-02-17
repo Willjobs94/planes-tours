@@ -39,7 +39,7 @@ namespace PlanesTour.AppServices
 
         public List<Hotel> GetAllHotelsByLocationDescendent()
         {
-            return _hotelRepository.GetHotelsByLocation().ToList();
+            return _hotelRepository.GetHotelsByLocation();
         }
         private readonly IHotelRepository _hotelRepository;
     }

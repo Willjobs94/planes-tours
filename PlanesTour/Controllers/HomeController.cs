@@ -3,14 +3,21 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using PlanesTour.AppServices.Contracts;
 
 namespace PlanesTour.Controllers
 {
     public class HomeController : Controller
     {
+        public HomeController(IHotelService hotelService)
+        {
+            _hotelService = hotelService;
+        }
+
         public ActionResult Index()
         {
-            return View();
+            var hotels = _hotelService.GetAllHotels();
+            return View(hotels);
         }
 
         public ActionResult About()
@@ -26,5 +33,7 @@ namespace PlanesTour.Controllers
 
             return View();
         }
+
+        private readonly IHotelService _hotelService;
     }
 }

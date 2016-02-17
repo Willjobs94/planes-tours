@@ -175,6 +175,10 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\PlanesTour.AppServices\PlanesTour.AppServices.csproj">
+      <Project>{ae41b214-f4e0-4600-b06f-e403b730758a}</Project>
+      <Name>PlanesTour.AppServices</Name>
+    </ProjectReference>
     <ProjectReference Include="..\PlanesTour.Core\PlanesTour.Core.csproj">
       <Project>{7a9f6e73-1dfe-4e97-90e0-4f8cc9bf4c2f}</Project>
       <Name>PlanesTour.Core</Name>

@@ -45,6 +45,8 @@
     <Compile Include="Domain\EntityBase.cs" />
     <Compile Include="Domain\Feedback.cs" />
     <Compile Include="Domain\Hotel.cs" />
+    <Compile Include="Domain\HotelPhoto.cs" />
+    <Compile Include="Domain\LocationPhoto.cs" />
     <Compile Include="Domain\Location.cs" />
     <Compile Include="Domain\Offert.cs" />
     <Compile Include="Domain\Photo.cs" />

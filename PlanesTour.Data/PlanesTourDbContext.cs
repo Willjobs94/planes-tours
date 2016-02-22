@@ -19,7 +19,9 @@ namespace PlanesTour.Data
         public DbSet<Reservation> Reservations { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<Child> Children { get; set; }
+        public DbSet<LocationPhoto> LocationPhotos { get; set; }
 
+        public DbSet<HotelPhoto> HotelPhotos { get; set; }
 
     }
 }

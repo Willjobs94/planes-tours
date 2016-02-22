@@ -35,5 +35,11 @@ namespace PlanesTour.Core.Domain
         /// </summary>
         public int OffertAmount { get; set; }
 
+        /// <summary>
+        /// The Image Path of the Offert
+        /// </summary>
+        [MaxLength(254)]
+        public string ImagePath { get; set; }
+
     }
 }

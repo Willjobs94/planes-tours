@@ -22,6 +22,7 @@ namespace PlanesTour.Data.Migrations
                 new Location
                 {
                     Name = "Boca Chica"
+                    
                 },
 
                 new Location

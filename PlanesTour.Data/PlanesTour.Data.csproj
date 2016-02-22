@@ -49,14 +49,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Migrations\201602202239519_initialMigration.cs" />
-    <Compile Include="Migrations\201602202239519_initialMigration.Designer.cs">
-      <DependentUpon>201602202239519_initialMigration.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201602221118262_initialMigration1.cs" />
-    <Compile Include="Migrations\201602221118262_initialMigration1.Designer.cs">
-      <DependentUpon>201602221118262_initialMigration1.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="PlanesTourDbContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -70,14 +62,6 @@
       <Project>{7a9f6e73-1dfe-4e97-90e0-4f8cc9bf4c2f}</Project>
       <Name>PlanesTour.Core</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201602202239519_initialMigration.resx">
-      <DependentUpon>201602202239519_initialMigration.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201602221118262_initialMigration1.resx">
-      <DependentUpon>201602221118262_initialMigration1.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

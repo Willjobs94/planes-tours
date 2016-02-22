@@ -18,11 +18,6 @@ namespace PlanesTour.Core.Domain
         public string  Name { get; set; }
 
         /// <summary>
-        /// Photos of the hotel
-        /// </summary>
-        public List<Photo> Photos { get; set; }
-
-        /// <summary>
         /// Users feedBacks of the hotel
         /// </summary>
         public List<Feedback> FeedBacks { get; set; }
@@ -43,7 +38,7 @@ namespace PlanesTour.Core.Domain
         /// <summary>
         /// Photo Entity Asociated with the hotel
         /// </summary>
-        public Photo Photo { get; set; }
+        public List<Photo> Photos { get; set; }
 
         /// <summary>
         /// Location Entity asociated with the hotel

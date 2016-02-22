@@ -14,7 +14,7 @@ namespace PlanesTour.Core.Domain
         /// <summary>
         /// The user phone number that will be use for the agent to contact him
         /// </summary>
-        [MaxLength(15)]
+        [MaxLength(20)]
         public string PhoneNumber { get; set; }
 
         /// <summary>

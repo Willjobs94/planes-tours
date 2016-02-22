@@ -13,13 +13,12 @@ namespace PlanesTour.Core.Domain
         /// <summary>
         /// Short reason about why a particular user gives an hotel the that score
         /// </summary>
+        [MaxLength(500)]
         public string Description { get; set; }
-
         /// <summary>
         /// The hotel that the feedback is asociated with
         /// </summary>
         public int HotelId { get; set; }
-
         /// <summary>
         /// Indicates is a feedback have been aproved for the admin to be shown
         /// </summary>

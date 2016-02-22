@@ -62,7 +62,7 @@ namespace PlanesTour.Data.Migrations
 
                 new Hotel
                 {
-                    Name = "Be Live Hamaca Beach", 
+                    Name = "Be Live Hamaca Beach",
                     LocationId = 1
                 },
 
@@ -86,7 +86,7 @@ namespace PlanesTour.Data.Migrations
 
                 new Hotel
                 {
-                    Name = "Hotel Coral Costa Caribe", 
+                    Name = "Hotel Coral Costa Caribe",
                     LocationId = 2
                 },
 

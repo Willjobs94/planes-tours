@@ -12,9 +12,9 @@ namespace PlanesTour.Repository
     {
         public OffertRepository(PlanesTourDbContext context) : base(context) { }
 
-        public List<Offert> GetActiveOfferts()
+        public List<Offert> GetAllOfferts()
         {
-            return DbSet.Where(a => a.IsActive == true).ToList();
+            return GetAll().ToList();
         }
     }
 }

@@ -8,6 +8,6 @@ namespace PlanesTour.Repository.Contracts
 {
     public interface IOffertRepository : IBaseRepository<Offert>
     {
-        List<Offert> GetActiveOfferts();
+        List<Offert> GetAllOfferts();
     }
 }

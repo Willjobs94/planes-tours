@@ -7,13 +7,13 @@ namespace PlanesTour.Data.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class AddMissedReferences : IMigrationMetadata
+    public sealed partial class initialMigration : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(AddMissedReferences));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(initialMigration));
         
         string IMigrationMetadata.Id
         {
-            get { return "201602160022555_AddMissedReferences"; }
+            get { return "201602202239519_initialMigration"; }
         }
         
         string IMigrationMetadata.Source

@@ -49,13 +49,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Migrations\201602150337036_Initial.cs" />
-    <Compile Include="Migrations\201602150337036_Initial.Designer.cs">
-      <DependentUpon>201602150337036_Initial.cs</DependentUpon>
+    <Compile Include="Migrations\201602202239519_initialMigration.cs" />
+    <Compile Include="Migrations\201602202239519_initialMigration.Designer.cs">
+      <DependentUpon>201602202239519_initialMigration.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201602160022555_AddMissedReferences.cs" />
-    <Compile Include="Migrations\201602160022555_AddMissedReferences.Designer.cs">
-      <DependentUpon>201602160022555_AddMissedReferences.cs</DependentUpon>
+    <Compile Include="Migrations\201602221118262_initialMigration1.cs" />
+    <Compile Include="Migrations\201602221118262_initialMigration1.Designer.cs">
+      <DependentUpon>201602221118262_initialMigration1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="PlanesTourDbContext.cs" />
@@ -72,11 +72,11 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201602150337036_Initial.resx">
-      <DependentUpon>201602150337036_Initial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201602202239519_initialMigration.resx">
+      <DependentUpon>201602202239519_initialMigration.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201602160022555_AddMissedReferences.resx">
-      <DependentUpon>201602160022555_AddMissedReferences.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201602221118262_initialMigration1.resx">
+      <DependentUpon>201602221118262_initialMigration1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

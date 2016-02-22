@@ -12,7 +12,7 @@ namespace PlanesTour.Repository
     {
         public LocationRepository(PlanesTourDbContext context) : base(context) { }
 
-        public List<Location>GetLocationsByNameDescendent()
+        public List<Location>GetLocationsDescendingByName()
         {
             return DbSet.OrderByDescending(a => a.Name).ToList();
         }

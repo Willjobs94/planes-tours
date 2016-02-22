@@ -13,11 +13,15 @@ namespace PlanesTour.App_Start
         public override void Load()
         {
             Kernel.Bind<PlanesTourDbContext>().ToSelf().InRequestScope();
+
             Kernel.Bind<IHotelRepository>().To<HotelRepository>();
             Kernel.Bind<IFeedbackRepository>().To<FeedbackRepository>();
             Kernel.Bind<ILocationRepository>().To<LocationRepository>();
+            Kernel.Bind<IOffertRepository>().To<OffertRepository>();
 
             Kernel.Bind<IHotelService>().To<HotelService>();
+            Kernel.Bind<IOffertService>().To<OffertService>();
+            Kernel.Bind<ILocationService>().To<LocationService>();
 
             //throw new NotImplementedException();
         }

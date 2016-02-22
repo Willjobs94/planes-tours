@@ -5,10 +5,10 @@ using System.Text;
 using System.Threading.Tasks;
 using PlanesTour.Core.Domain;
 
-namespace PlanesTour.Repository.Contracts
+namespace PlanesTour.AppServices.Contracts
 {
-   public interface ILocationRepository : IBaseRepository<Location>
+    public interface IOffertService
     {
-        List<Location> GetLocationsDescendingByName();
+        List<Offert> GetActiveOfferts();
     }
 }

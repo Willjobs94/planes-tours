@@ -35,9 +35,5 @@ namespace PlanesTour.Core.Domain
         /// </summary>
         public int OffertAmount { get; set; }
 
-        /// <summary>
-        /// Indicate is the offer is active
-        /// </summary>
-        public bool IsActive { get; set; }
     }
 }

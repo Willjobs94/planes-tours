@@ -14,7 +14,7 @@ namespace PlanesTour.Repository
         
         public List<Hotel>GetHotelsByLocation()
         {
-            return GetAll().OrderByDescending(a => a.Location.Name).ToList();
+            return GetAllHotels().OrderByDescending(a => a.Location.Name).ToList();
         }
 
         public List<Hotel> GetHotelsByLocation(Location location)

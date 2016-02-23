@@ -28,6 +28,10 @@ namespace PlanesTour.AppServices
            return _hotelRepository.GetAllHotels();
         }
 
+        public List<Hotel>GetAllHotels(int amount)
+        {
+            return _hotelRepository.GetAllHotels(amount);
+        }
         public void UpdateViewCount(int hotelId)
         {
             var hotel = _hotelRepository.GetHotelById(hotelId);

@@ -44,16 +44,28 @@
         <span class="sr-only">Next</span>
     </a>
 </div>
-
+<hr />
 <div class="row">
 
     @foreach (var offert in Model.Offerts)
     {
         <div class="col-md-4 portfolio-item">
             <a href="#">
-                <img class="img-responsive" src="http://placehold.it/700x400" alt="">
+                <img class="img-responsive" src="~/Assets/Images/placeholdit400x300.png" alt="">
             </a>
             <p>@offert.Description</p>
+        </div>
+    }
+</div>
+<hr />
+<div class="row">
+    @foreach (var hotel in Model.Hotels)
+    {
+        <div class="col-md-4 portfolio-item">
+            <a href="hotel/detail/@hotel.Id">
+                <img class="img-responsive" src="~/Assets/Images/placeholdit400x300.png" alt=""/>
+            </a>
+            <p>@hotel.Description</p>
         </div>
     }
 </div>

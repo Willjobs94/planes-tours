@@ -17,7 +17,12 @@ namespace PlanesTour.AppServices
         }
         public List<Offert>GetActiveOfferts()
         {
-            return _offertRepository.GetAllOfferts().Where(a => a.ExpirationDate < DateTime.Now).ToList();
+            
+            return _offertRepository.GetAllOfferts().Where(a => a.ExpirationDate > DateTime.Now).ToList();
+        }
+        public List<Offert>GetActiveOfferts(int amount)
+        {
+           return GetActiveOfferts().Take(amount).ToList();
         }
 
         private readonly IOffertRepository _offertRepository;

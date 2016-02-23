@@ -26,6 +26,10 @@ namespace PlanesTour.Repository
         {
             return GetAll().ToList();
         }
+        public List<Hotel> GetAllHotels(int amount)
+        {
+            return GetAll().Take(amount).ToList();
+        }
 
         public List<Hotel> GetHotelsByViewCountDescendent()
         {

@@ -13,12 +13,13 @@ namespace PlanesTour.Controllers
         public HomeController(IHotelService hotelService, IOffertService offertService)
         {
             _hotelService = hotelService;
+            _offertService = offertService;
         }
 
         public ActionResult Index()
         {
-            var hotels = _hotelService.GetAllHotels().Take(4);
-            var offerts = _offertService.GetActiveOfferts().Take(5);
+            var hotels = _hotelService.GetAllHotels(3);
+            var offerts = _offertService.GetActiveOfferts(3);
             var homeViewModel = new HomeViewModel
             {
                 Hotels = hotels,

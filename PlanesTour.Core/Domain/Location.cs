@@ -8,7 +8,7 @@ namespace PlanesTour.Core.Domain
         /// <summary>
         /// The location name 
         /// </summary>
-        [MaxLength("100")]
+        [MaxLength(100)]
         public string Name { get; set; }
 
         /// <summary>

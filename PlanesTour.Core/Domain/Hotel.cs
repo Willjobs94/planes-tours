@@ -38,7 +38,7 @@ namespace PlanesTour.Core.Domain
         /// <summary>
         /// Photo Entity Asociated with the hotel
         /// </summary>
-        public List<Photo> Photos { get; set; }
+        public virtual ICollection<HotelPhoto> Photos { get; set; }
 
         /// <summary>
         /// Location Entity asociated with the hotel

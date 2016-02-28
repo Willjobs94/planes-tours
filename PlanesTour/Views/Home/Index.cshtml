@@ -1,7 +1,7 @@
-﻿@model PlanesTour.ViewModels.HomeViewModel
+﻿@model PlanesTour.ViewModels.Home.Index
 
 @{
-    ViewBag.Title = "Home Page";
+    ViewBag.Title = "Index";
 }
 
 <div id="myCarousel" class="carousel slide container-fluid" data-ride="carousel">
@@ -63,7 +63,7 @@
     {
         <div class="col-md-4 portfolio-item">
             <a href="hotel/detail/@hotel.Id">
-                <img class="img-responsive" src="~/Assets/Images/placeholdit400x300.png" alt=""/>
+                <img class="img-responsive" src="~/Assets/Images/placeholdit400x300.png" alt="" />
             </a>
             <p>@hotel.Description</p>
         </div>

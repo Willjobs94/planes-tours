@@ -8,7 +8,7 @@ namespace PlanesTour.Data
         public PlanesTourDbContext()     
             : base ("LocalConnection")
         {
-
+            Configuration.LazyLoadingEnabled = true;
         }
 
         public DbSet<Feedback> FeedBacks { get; set; }

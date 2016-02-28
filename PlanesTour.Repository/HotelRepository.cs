@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Data.Entity;
 using System.Text;
 using System.Threading.Tasks;
 using PlanesTour.Core.Domain;
@@ -24,11 +25,12 @@ namespace PlanesTour.Repository
 
         public List<Hotel> GetAllHotels()
         {
-            return GetAll().ToList();
+
+            return DbSet.Include(a => a.Photos).ToList();
         }
         public List<Hotel> GetAllHotels(int amount)
         {
-            return GetAll().Take(amount).ToList();
+            return GetAllHotels().Take(amount).ToList();
         }
 
         public List<Hotel> GetHotelsByViewCountDescendent()

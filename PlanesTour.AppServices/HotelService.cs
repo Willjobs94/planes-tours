@@ -25,7 +25,9 @@ namespace PlanesTour.AppServices
 
         public List<Hotel>GetAllHotels()
         {
-           return _hotelRepository.GetAllHotels();
+
+            var hotelList = _hotelRepository.GetAllHotels();
+            return hotelList;
         }
 
         public List<Hotel>GetAllHotels(int amount)
@@ -45,6 +47,7 @@ namespace PlanesTour.AppServices
         {
             return _hotelRepository.GetHotelsByLocation();
         }
+
         private readonly IHotelRepository _hotelRepository;
     }
 }

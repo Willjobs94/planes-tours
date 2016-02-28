@@ -13,5 +13,7 @@ namespace PlanesTour.Core.Domain
     {
         public int HotelId { get; set; }
         public int PhotoId { get; set; }
+        public Hotel Hotel { get; set; }
+        public Photo Photo { get; set; }
     }
 }

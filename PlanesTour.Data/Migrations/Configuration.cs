@@ -21,6 +21,67 @@ namespace PlanesTour.Data.Migrations
         protected override void Seed(PlanesTour.Data.PlanesTourDbContext context)
         {
 
+            #region Offert List
+            var offertList = new List<Offert>
+            {
+
+                new Offert
+                {
+                    Description = "This is the best offert you can see",
+                    HotelId = 1,
+                    StartDate = DateTime.Now.AddDays(2),
+                    ExpirationDate = DateTime.Now.AddDays(7),
+                    OffertAmount = 100,
+                    ImagePath = Path.Combine(imageRootPath, "placeholdit400x300")
+                },
+
+                new Offert
+                {
+                    Description = "This is the second best offert that you will see",
+                    HotelId = 2,
+                    StartDate = DateTime.Now.AddDays(2),
+                    ExpirationDate = DateTime.Now.AddDays(7),
+                    OffertAmount = 100,
+                    ImagePath = Path.Combine(imageRootPath, "placeholdit400x300")
+
+                },
+
+                new Offert
+                {
+                    Description = "Another Offert",
+                    HotelId = 3,
+                    StartDate = DateTime.Now.AddDays(2),
+                    ExpirationDate = DateTime.Now.AddDays(7),
+                    OffertAmount = 100,
+                    ImagePath = Path.Combine(imageRootPath, "placeholdit400x300")
+                },
+
+                new Offert
+                {
+                    Description = "Another Offert 2",
+                    HotelId = 4,
+                    StartDate = DateTime.Now.AddDays(2),
+                    ExpirationDate = DateTime.Now.AddDays(7),
+                    OffertAmount = 100,
+                    ImagePath = Path.Combine(imageRootPath, "placeholdit400x300")
+                },
+
+                new Offert
+                {
+                    Description = "Another differten Offert Offert",
+                    HotelId = 5,
+                    StartDate = DateTime.Now.AddDays(2),
+                    ExpirationDate = DateTime.Now.AddDays(7),
+                    OffertAmount = 100,
+                    ImagePath = Path.Combine(imageRootPath, "placeholdit400x300")
+                }
+            };
+
+            foreach (var offert in offertList)
+            {
+                context.Offerts.AddOrUpdate(a => a.Description, offert);
+            }
+            #endregion
           
             #region Photo List
             var photoList = new List<Photo>
@@ -53,14 +114,20 @@ namespace PlanesTour.Data.Migrations
                 {
                     Path = Path.Combine(photoRootPath, "puertoplata.jpg"),
                     Description = "Puerto Plata"
+                },
+
+                new Photo
+                {
+                    Path = Path.Combine(imageRootPath, "placeholdit400x300.png"),
+                    Description = "Placeholder Image"
                 }
 
             };
-            #endregion
             foreach (var photo in photoList)
             {
                 context.Photos.AddOrUpdate(a => a.Path, photo);
             }
+            #endregion
 
             #region Location List
             var locationList = new List<Location>
@@ -91,49 +158,12 @@ namespace PlanesTour.Data.Migrations
                 }
 
             };
-            #endregion
             foreach (var location in locationList)
             {
                 context.Locations.AddOrUpdate(a => a.Name, location);
             }
-            #region LocationPhoto List
-            var locationPhotoList = new List<LocationPhoto>
-            {
-                new LocationPhoto
-                {
-                    LocationId = 1,
-                    PhotoId = 1
-                },
-
-                new LocationPhoto
-                {
-                    LocationId = 2,
-                    PhotoId = 2
-                },
-
-                new LocationPhoto
-                {
-                    LocationId = 3,
-                    PhotoId = 3
-                },
-                
-                new LocationPhoto
-                {
-                    LocationId = 4,
-                    PhotoId = 4
-                } ,
-
-                new LocationPhoto
-                {
-                    LocationId = 5,
-                    PhotoId = 5
-                }
-            };
             #endregion
-            foreach (var locationPhoto in locationPhotoList)
-            {
-                context.LocationPhotos.AddOrUpdate(a => a.LocationId, locationPhoto);
-            }
+
             #region Hotel List
             var hotelLIst = new List<Hotel>
             {
@@ -269,74 +299,32 @@ namespace PlanesTour.Data.Migrations
                     LocationId = 5
                 }
             };
+            hotelLIst.ForEach(hotel => context.Hotels.AddOrUpdate(a => a.Name, hotel));
             #endregion
 
-            foreach (var hotel in hotelLIst)
+            #region LocationPhoto List
+            foreach (var location in context.Locations)
             {
-                context.Hotels.AddOrUpdate(a => a.Name, hotel);
+                var locationPhoto = new LocationPhoto
+                {
+                    LocationId = location.Id,
+                    PhotoId = location.Id
+                };
+                context.LocationPhotos.AddOrUpdate(a => a.LocationId, locationPhoto);
             }
-
-            #region Offert List
-            var offertList = new List<Offert>
-            {
-
-                new Offert
-                {
-                    Description = " This is the best offert you can see",
-                    HotelId = 1,
-                    StartDate = DateTime.Now.AddDays(2),
-                    ExpirationDate = DateTime.Now.AddDays(7),
-                    OffertAmount = 100,
-                    ImagePath = Path.Combine(imageRootPath, "placeholdit400x300")
-                },
-
-                new Offert
-                {
-                    Description = "This is the second best offert that you will see",
-                    HotelId = 2,
-                    StartDate = DateTime.Now.AddDays(2),
-                    ExpirationDate = DateTime.Now.AddDays(7),
-                    OffertAmount = 100,
-                    ImagePath = Path.Combine(imageRootPath, "placeholdit400x300")
-
-                },
-
-                new Offert
-                {
-                    Description = "Another Offert",
-                    HotelId = 3,
-                    StartDate = DateTime.Now.AddDays(2),
-                    ExpirationDate = DateTime.Now.AddDays(7),
-                    OffertAmount = 100,
-                    ImagePath = Path.Combine(imageRootPath, "placeholdit400x300")
-                },
-
-                new Offert
-                {
-                    Description = "Another Offert",
-                    HotelId = 4,
-                    StartDate = DateTime.Now.AddDays(2),
-                    ExpirationDate = DateTime.Now.AddDays(7),
-                    OffertAmount = 100,
-                    ImagePath = Path.Combine(imageRootPath, "placeholdit400x300")
-                },
-
-                new Offert
-                {
-                    Description = "Another differten Offert Offert",
-                    HotelId = 5,
-                    StartDate = DateTime.Now.AddDays(2),
-                    ExpirationDate = DateTime.Now.AddDays(7),
-                    OffertAmount = 100,
-                    ImagePath = Path.Combine(imageRootPath, "placeholdit400x300")
-                }
-            };
             #endregion
 
-            foreach (var offert in offertList)
+            #region HotelPhotoList
+            foreach (var hotel in context.Hotels)
             {
-                context.Offerts.AddOrUpdate(a => a.Description, offert);
+                var hotelPhoto = new HotelPhoto
+                {
+                    HotelId = hotel.Id,
+                    PhotoId = 6
+                };
+                context.HotelPhotos.AddOrUpdate(a => a.HotelId, hotelPhoto);
             }
+            #endregion
         }
     }
 }

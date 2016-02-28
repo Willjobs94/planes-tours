@@ -14,6 +14,6 @@ namespace PlanesTour.Core.Domain
         /// <summary>
         /// Photos related with this location
         /// </summary>
-        public List<LocationPhoto> Photos { get; set; }
+        public IEnumerable<Photo> Photos { get; set; }
     }
 }

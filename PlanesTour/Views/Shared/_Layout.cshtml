@@ -4,39 +4,129 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - My ASP.NET Application</title>
-    @Styles.Render("~/Content/css")
+    @*@Styles.Render("~/Content/css")*@
     @Scripts.Render("~/bundles/modernizr")
+    <!-- Bootstrap CSS -->
+    <link href="/Content/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Oswald:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">   
+    <link href="~/Content/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Plugin CSS -->
+    <link href="~/Content/owl-carousel/owl.carousel.css" rel="stylesheet">
+    <link href="~/Content/owl-carousel/owl.theme.css" rel="stylesheet">
+    <link href="~/Content/owl-carousel/owl.transitions.css" rel="stylesheet">
+    <link href="~/Content/vegas.min.css" rel="stylesheet">
+
+
+    <!-- Custom CSS -->
+    <link href="~/Content/styles.css" rel="stylesheet">
+
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <a href="" class="logo">
+                        <img src="~/Content/img/logo.png" alt="Brand">
+                    </a>
+                </div>
+                <div class="col-sm-6 hidden-xs text-right">
+                    <span class="header-lead">Reserva en linea o<br>llamando al (000) 000 0000</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-static-top">
         <div class="container">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#pt-navbar-collapse" aria-expanded="false">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/">Planes Tour</a>
             </div>
-            <div class="navbar-collapse collapse">
+            <div class="collapse navbar-collapse" id="pt-navbar-collapse">
                 <ul class="nav navbar-nav">
-                    <li><a href="/">Inicio</a></li>
-                    <li><a href="/location">Destinos</a></li>
-                    <li><a href="/home/about">Acerca de Nosotros</a></li>                   
+                    <li class="active">
+                        <a href="">Inicio</a>
+                    </li>
+                    <li>
+                        <a href="">Hoteles</a>
+                    </li>
+                    <li>
+                        <a href="">Acerca de nosotros</a>
+                    </li>
                 </ul>
             </div>
         </div>
-    </div>
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
-    </div>
+    </nav>
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
+        @RenderBody()
+
+
+    <!-- Aside footer -->
+    <aside id="aside-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-md-6 aside-footer-widget">
+                    <a href="" class="logo">
+                        <img src="~/Content/img/logo.png" alt="Brand">
+                    </a>
+                </div>
+                <div class="col-md-4 col-sm-6 aside-footer-widget">
+                    <h4>Nuestras secciones</h4>
+                    <ul class="list-unstyled">
+                        <li class="active">
+                            <a href="" class="text-gray">Inicio</a>
+                        </li>
+                        <li>
+                            <a href="" class="text-gray">Hoteles</a>
+                        </li>
+                        <li>
+                            <a href="" class="text-gray">Acerca de nosotros</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-5 col-md-6 aside-footer-widget">
+                    <h4>Necesitas Ayuda?</h4>
+                    <p class="text-gray">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-12">
+                    <span>&copy; 2016 Todos los derechos reservados | Este Website fue creado por <a href="">Twist Consulting</a></span>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
     @RenderSection("scripts", required: false)
+    <!-- JQuery -->
+    @Scripts.Render("~/bundles/jquery")
+
+    <!-- Bootstrap JS -->
+    @Scripts.Render("~/bundles/bootstrap")
+
+
+    <!-- Plugin JS -->
+    <script src="~/Scripts/owl.carousel.min.js"></script>
+    <script src="~/Scripts/vegas.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="~/Scripts/scripts.js"></script>
 </body>
 </html>

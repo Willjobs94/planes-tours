@@ -166,23 +166,38 @@
     <Content Include="Assets\Photos\puntacana.png" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\img\img-1.jpg" />
+    <Content Include="Content\img\img-2.jpg" />
+    <Content Include="Content\img\img-3.jpg" />
+    <Content Include="Content\img\img-4.jpg" />
+    <Content Include="Content\img\img-5.jpg" />
+    <Content Include="Content\img\img-6.jpg" />
+    <Content Include="Content\img\img-7.jpg" />
+    <Content Include="Content\img\logo.png" />
+    <Content Include="Content\styles.css" />
+    <Content Include="Content\vegas.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Content\styles.css.map" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.min.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\owl.carousel.min.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\scripts.js" />
+    <Content Include="Scripts\vegas.min.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -200,10 +215,14 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Location\Index.cshtml" />
+    <Content Include="Views\Home\Index2.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Content\font-awesome\" />
+    <Folder Include="Content\overlays\" />
+    <Folder Include="Content\owl-carousel\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>

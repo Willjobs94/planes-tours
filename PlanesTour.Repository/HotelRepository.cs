@@ -25,8 +25,10 @@ namespace PlanesTour.Repository
 
         public List<Hotel> GetAllHotels()
         {
-
-            return DbSet.Include(a => a.Photos).ToList();
+            var hotelList = Context.Hotels.ToList();
+            hotelList.ForEach(a => a.Photos = Context.HotelPhotos
+                .Where(b => b.HotelId == a.Id).Select(c => c.Photo).ToList());
+            return hotelList;
         }
         public List<Hotel> GetAllHotels(int amount)
         {

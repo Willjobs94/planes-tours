@@ -23,6 +23,14 @@ a:hover {
   color: #55AB26;
 }
 
+hr.small {
+  background-color: #55AB26;
+  border-style: none;
+  height: 3px;
+  margin: 0 auto;
+  max-width: 50px;
+}
+
 h1,
 h2,
 h3,
@@ -52,7 +60,11 @@ ul.list-unstyled {
 
 section,
 aside {
-  padding: 82px 0;
+  padding: 50px 0;
+}
+
+.page-content {
+  min-height: calc(100vh - 564px);
 }
 
 /* ------------------------------
@@ -90,6 +102,9 @@ header .header-lead {
 .navbar-default {
   background-color: #55AB26;
   border-style: none;
+  -webkit-box-shadow: 0px 2px 17px rgba(19, 19, 19, 0.3);
+  -moz-box-shadow: 0px 2px 17px rgba(19, 19, 19, 0.3);
+  box-shadow: 0px 2px 17px rgba(19, 19, 19, 0.3);
   margin-bottom: 0;
 }
 .navbar-default .navbar-header .navbar-toggle {
@@ -156,7 +171,7 @@ header .header-lead {
   padding: 0;
 }
 #intro .intro-content {
-  background-color: rgba(19, 19, 19, 0.7);
+  background-color: rgba(19, 19, 19, 0.3);
   height: 500px;
   position: relative;
 }
@@ -186,8 +201,31 @@ header .header-lead {
    Section Styles
  
 --------------------------------- */
-.heading-section {
+.section-heading {
   margin: 0 0 44px;
+}
+
+.card-location {
+  margin-bottom: 34px !important;
+}
+
+.card-location-detail {
+  margin-bottom: 24px !important;
+}
+.card-location-detail::after {
+  clear: both;
+  content: " ";
+  display: block;
+}
+@media (min-width: 768px) {
+  .card-location-detail {
+    margin-bottom: 18px !important;
+  }
+  .card-location-detail .card-img {
+    float: left;
+    margin-right: 24px;
+    width: 260px !important;
+  }
 }
 
 /* ------------------------------
@@ -195,11 +233,17 @@ header .header-lead {
    Cards
  
 --------------------------------- */
+.card-simple {
+  margin-bottom: 14px;
+}
 .card-simple .card-img {
   background-color: #131313;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+  -webkit-box-shadow: 0px 2px 17px rgba(19, 19, 19, 0.3);
+  -moz-box-shadow: 0px 2px 17px rgba(19, 19, 19, 0.3);
+  box-shadow: 0px 2px 17px rgba(19, 19, 19, 0.3);
   border-radius: 3px;
   height: 240px;
   margin-bottom: 18px;
@@ -230,7 +274,7 @@ header .header-lead {
   opacity: 1;
 }
 .card-simple .card-title {
-  margin: 0 0 8px;
+  margin: 0 0 12px;
 }
 .card-simple .star-rater {
   margin-top: 14px;
@@ -241,6 +285,11 @@ header .header-lead {
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 3px;
+  -webkit-box-shadow: 0px 2px 17px rgba(19, 19, 19, 0.3);
+  -moz-box-shadow: 0px 2px 17px rgba(19, 19, 19, 0.3);
+  box-shadow: 0px 2px 17px rgba(19, 19, 19, 0.3);
+  height: 300px;
+  margin-bottom: 14px;
   overflow: hidden;
 }
 .card-wide a,
@@ -249,21 +298,29 @@ header .header-lead {
   color: white;
   text-decoration: none;
 }
+.card-wide a {
+  display: block;
+  height: 100%;
+  position: relative;
+  width: 100%;
+}
 .card-wide .card-content {
   background-color: rgba(19, 19, 19, 0.6);
-  padding: 250px 32px 22px;
+  bottom: 0;
+  left: 0;
+  padding: 24px 28px;
+  position: absolute;
   -webkit-transition: all .3s;
   -moz-transition: all .3s;
   transition: all .3s;
   outline: 3px solid white;
   outline-offset: -15px;
+  width: 100%;
 }
 .card-wide .card-title {
   margin: 0;
 }
 .card-wide:hover .card-content {
-  background-color: rgba(19, 19, 19, 0.8);
-  padding: 250px 32px 22px;
   outline-color: #55AB26;
 }
 
@@ -340,7 +397,7 @@ header .header-lead {
   }
 }
 .owl-custom .owl-controls {
-  margin-top: 44px;
+  margin-top: 30px;
 }
 .owl-custom .owl-controls .owl-pagination .owl-page span {
   background-color: #131313;
@@ -381,6 +438,10 @@ footer {
 --------------------------------- */
 .text-gray {
   color: #6f6f6f;
+}
+
+.text-primary {
+  color: #55AB26;
 }
 
 .badge {

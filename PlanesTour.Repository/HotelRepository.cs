@@ -13,21 +13,23 @@ namespace PlanesTour.Repository
     {
         public HotelRepository(PlanesTourDbContext context) : base(context) { }
         
-        public List<Hotel>GetHotelsByLocation()
+        public IEnumerable<Hotel>GetHotelsByLocation()
         {
             return GetAllHotels().OrderByDescending(a => a.Location.Name).ToList();
         }
 
-        public List<Hotel> GetHotelsByLocation(Location location)
+        public IEnumerable<Hotel> GetHotelsByLocation(int locationId)
         {
-            return DbSet.Where(a => a.LocationId == location.Id).ToList();
+            return GetHotelsByLocation().Where(a => a.LocationId == locationId).ToList();
         }
 
         public List<Hotel> GetAllHotels()
         {
-            var hotelList = Context.Hotels.ToList();
+            var hotelList = Context.Hotels.Include(a => a.Location).ToList();
             hotelList.ForEach(a => a.Photos = Context.HotelPhotos
-                .Where(b => b.HotelId == a.Id).Select(c => c.Photo).ToList());
+                .Where(b => b.HotelId == a.Id)
+                .Select(c => c.Photo)
+                .ToList());          
             return hotelList;
         }
         public List<Hotel> GetAllHotels(int amount)

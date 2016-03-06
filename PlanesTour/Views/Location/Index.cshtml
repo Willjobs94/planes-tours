@@ -1,15 +1,26 @@
-﻿@model PlanesTour.ViewModels.Location.Index
+﻿@model IEnumerable<PlanesTour.Core.Domain.Location>
 
-<div class="row">
-
-    @foreach (var location in Model.Locations)
-    {
-        <div class="col-md-4 portfolio-item">
-            <a href="#">
-               @* <img class="img-responsive" src="@location.Photos.FirstOrDefault()" alt="">*@
-            </a>
-            <p>@location.Name</p>
+<main class="page-content">
+    <!-- Location List -->
+    <section>
+        <div class="container">
+            <div class="row text-center">
+                @foreach (var location in Model)
+                {
+                <div class="col-md-4">
+                    <figure class="card-simple card-location">
+                        <h3 class="card-title">@location.Name</h3>
+                        <a href="/locations/@location.Id">
+                            <div class="card-img" style="background-image: url('@location.Photos.FirstOrDefault().Path')">
+                                <div class="card-img-obfuscar">
+                                    <span class="fa fa-arrow-circle-right fa-3x"></span>
+                                </div>
+                            </div>
+                        </a>
+                    </figure>
+                </div>
+                }
+            </div>
         </div>
-    }
-</div>
-
+    </section>
+</main>

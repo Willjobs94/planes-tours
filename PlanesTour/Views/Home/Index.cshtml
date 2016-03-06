@@ -7,14 +7,14 @@
             <div class="container text-center">
                 <div class="row">
                     <div class="col-sm-8 col-sm-offset-2">
-                        <h1 class="intro-heading">Lo que buscas, Lo encontraras</h1>
+                        <h1 class="intro-heading">Para una reservacion segura y rápida</h1>
                     </div>
                 </div>
-                <div class="row">
+                @*<div class="row">
                     <div class="col-sm-8 col-sm-offset-2">
                         <a href="" class="btn btn-primary btn-xl">Busca el mejor hotel</a>
                     </div>
-                </div>
+                </div>*@
             </div>
         </div>
     </div>
@@ -99,18 +99,21 @@
     </div>
     <div class="container owl-custom">
         <ul id="owl-best-hotel" class="owl-carousel owl-theme list-unstyled">
+            @foreach (var hotel in Model.Hotels)
+            {
             <li>
                 <figure class="card-simple text-center">
                     <a href="">
-                        <div class="card-img" style="background-image: url('../../Content/img/img-6.jpg')">
+                        <div class="card-img" style="background-image: url('@hotel.Photos.FirstOrDefault().Path')" >
+                
                             <div class="card-img-obfuscar">
                                 <span class="fa fa-arrow-circle-right fa-3x"></span>
                             </div>
                         </div>
                     </a>
                     <figcaption>
-                        <h4 class="card-title">Hotel Barcelo</h4>
-                        <span class="text-gray">Punta Cana</span>
+                        <h4 class="card-title">@hotel.Name</h4>
+                        <span class="text-gray">@hotel.Location.Name</span>
                         <div class="star-rater">
                             <span class="fa fa-star rating"></span>
                             <span class="fa fa-star rating"></span>
@@ -121,122 +124,13 @@
                     </figcaption>
                 </figure>
             </li>
-            <li>
-                <figure class="card-simple text-center">
-                    <a href="">
-                        <div class="card-img" style="background-image: url('../../Content/img/img-7.jpg')">
-                            <div class="card-img-obfuscar">
-                                <span class="fa fa-arrow-circle-right fa-3x"></span>
-                            </div>
-                        </div>
-                    </a>
-                    <figcaption>
-                        <h4 class="card-title">Hotel Cancun</h4>
-                        <span class="text-gray">Puerto Plata</span>
-                        <div class="star-rater">
-                            <span class="fa fa-star rating"></span>
-                            <span class="fa fa-star rating"></span>
-                            <span class="fa fa-star rating"></span>
-                            <span class="fa fa-star rating"></span>
-                            <span class="fa fa-star"></span>
-                        </div>
-                    </figcaption>
-                </figure>
-            </li>
-            <li>
-                <figure class="card-simple text-center">
-                    <a href="">
-                        <div class="card-img" style="background-image: url('../../Content/img/img-6.jpg')">
-                            <div class="card-img-obfuscar">
-                                <span class="fa fa-arrow-circle-right fa-3x"></span>
-                            </div>
-                        </div>
-                    </a>
-                    <figcaption>
-                        <h4 class="card-title">Hotel Barcelo</h4>
-                        <span class="text-gray">Punta Cana</span>
-                        <div class="star-rater">
-                            <span class="fa fa-star rating"></span>
-                            <span class="fa fa-star rating"></span>
-                            <span class="fa fa-star rating"></span>
-                            <span class="fa fa-star rating"></span>
-                            <span class="fa fa-star"></span>
-                        </div>
-                    </figcaption>
-                </figure>
-            </li>
-            <li>
-                <figure class="card-simple text-center">
-                    <a href="">
-                        <div class="card-img" style="background-image: url('../../Content/img/img-7.jpg')">
-                            <div class="card-img-obfuscar">
-                                <span class="fa fa-arrow-circle-right fa-3x"></span>
-                            </div>
-                        </div>
-                    </a>
-                    <figcaption>
-                        <h4 class="card-title">Hotel Cancun</h4>
-                        <span class="text-gray">Puerto Plata</span>
-                        <div class="star-rater">
-                            <span class="fa fa-star rating"></span>
-                            <span class="fa fa-star rating"></span>
-                            <span class="fa fa-star rating"></span>
-                            <span class="fa fa-star rating"></span>
-                            <span class="fa fa-star"></span>
-                        </div>
-                    </figcaption>
-                </figure>
-            </li>
-            <li>
-                <figure class="card-simple text-center">
-                    <a href="">
-                        <div class="card-img" style="background-image: url('../../Content/img/img-6.jpg')">
-                            <div class="card-img-obfuscar">
-                                <span class="fa fa-arrow-circle-right fa-3x"></span>
-                            </div>
-                        </div>
-                    </a>
-                    <figcaption>
-                        <h4 class="card-title">Hotel Barcelo</h4>
-                        <span class="text-gray">Punta Cana</span>
-                        <div class="star-rater">
-                            <span class="fa fa-star rating"></span>
-                            <span class="fa fa-star rating"></span>
-                            <span class="fa fa-star rating"></span>
-                            <span class="fa fa-star rating"></span>
-                            <span class="fa fa-star"></span>
-                        </div>
-                    </figcaption>
-                </figure>
-            </li>
-            <li>
-                <figure class="card-simple text-center">
-                    <a href="">
-                        <div class="card-img" style="background-image: url('../../Content/img/img-7.jpg')">
-                            <div class="card-img-obfuscar">
-                                <span class="fa fa-arrow-circle-right fa-3x"></span>
-                            </div>
-                        </div>
-                    </a>
-                    <figcaption>
-                        <h4 class="card-title">Hotel Cancun</h4>
-                        <span class="text-gray">Puerto Plata</span>
-                        <div class="star-rater">
-                            <span class="fa fa-star rating"></span>
-                            <span class="fa fa-star rating"></span>
-                            <span class="fa fa-star rating"></span>
-                            <span class="fa fa-star rating"></span>
-                            <span class="fa fa-star"></span>
-                        </div>
-                    </figcaption>
-                </figure>
-            </li>
+            }
         </ul>
         <div class="prev prev-2">
-            <span class="fa fa-angle-left"/>
+            <span class="fa fa-angle-left" />
         </div>
         <div class="next next-2">
-            <span class="fa fa-angle-right"/>
+            <span class="fa fa-angle-right" />
         </div>
     </div>
 </section>

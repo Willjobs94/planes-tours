@@ -9,6 +9,6 @@ namespace PlanesTour.Repository.Contracts
 {
    public interface ILocationRepository : IBaseRepository<Location>
     {
-        List<Location> GetLocationsDescendingByName();
+        IEnumerable<Location> GetLocationsDescendingByName();
     }
 }

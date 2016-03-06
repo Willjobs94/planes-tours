@@ -11,9 +11,8 @@ namespace PlanesTour.Repository.Contracts
         Hotel GetHotelById(int hotelId);
         List<Hotel> GetAllHotels();
         List<Hotel> GetAllHotels(int amount);
-        List<Hotel> GetHotelsByLocation();
-        List<Hotel> GetHotelsByLocation(Location location);
+        IEnumerable<Hotel> GetHotelsByLocation();
+        IEnumerable<Hotel> GetHotelsByLocation(int locationId);
         List<Hotel> GetHotelsByViewCountDescendent();
-        //List<Hotel> GetRelatedHotelsByLocation(Location location);
     }
 }

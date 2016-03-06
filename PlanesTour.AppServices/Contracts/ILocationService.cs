@@ -9,6 +9,7 @@ namespace PlanesTour.AppServices.Contracts
 {
     public interface ILocationService
     {
-        List<Location> GetAllLocationsDescendingByName();
+        IEnumerable<Location> GetAllLocationsDescendingByName();
+        Location GetLocationById(int locationId);
     }
 }

@@ -20,7 +20,7 @@ namespace PlanesTour.Controllers
 
         public ActionResult Index()
         {
-            var hotels = _hotelService.GetAllHotels(3);
+            var hotels = _hotelService.GetAllHotels(8);
             var offerts = _offertService.GetActiveOfferts(3);
             var indexViewModel = new Index
             {

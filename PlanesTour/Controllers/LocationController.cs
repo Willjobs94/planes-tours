@@ -9,16 +9,23 @@ namespace PlanesTour.Controllers
 {
     public class LocationController : Controller
     {
-        public LocationController(ILocationService locationService)
+        public LocationController(ILocationService locationService, IHotelService hotelService)
         {
             _locationService = locationService;
+            _hotelService = hotelService;
         }
         public ActionResult Index()
         {
-            var locations = _locationService.GetAllLocationsDescendingByName();
-            return View(locations);
+            return View(_locationService.GetAllLocationsDescendingByName());
+        }
+
+        public ActionResult Detail(int locationId)
+        {
+            ViewBag.LocationName = _locationService.GetLocationById(locationId).Name;
+            return View(_hotelService.GetAllHotelsByLocationDescendent(locationId));
         }
 
         private readonly ILocationService _locationService;
+        private readonly IHotelService _hotelService;
     }
 }

@@ -16,9 +16,15 @@ namespace PlanesTour.AppServices
             _locationRepository = locationRepository;
         }
 
-        public List<Location>GetAllLocationsDescendingByName()
+        public IEnumerable<Location>GetAllLocationsDescendingByName()
         {
             return _locationRepository.GetLocationsDescendingByName();
+        }
+
+        public Location GetLocationById(int locationId)
+        {
+            return _locationRepository.GetLocationsDescendingByName()
+                .Where(a => a.Id == locationId).FirstOrDefault();
         }
         private readonly ILocationRepository _locationRepository;
     }

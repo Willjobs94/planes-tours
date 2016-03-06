@@ -12,9 +12,14 @@ namespace PlanesTour.Repository
     {
         public LocationRepository(PlanesTourDbContext context) : base(context) { }
 
-        public List<Location>GetLocationsDescendingByName()
+        public IEnumerable<Location> GetLocationsDescendingByName()
         {
-            return DbSet.OrderByDescending(a => a.Name).ToList();
+            var locationlist = GetAll().ToList();
+            locationlist.ForEach(a => a.Photos = Context.LocationPhotos
+            .Where(b => b.LocationId == a.Id)
+            .Select(c => c.Photo).ToList());
+
+            return locationlist;
         }
     }
 }

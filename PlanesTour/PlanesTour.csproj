@@ -159,11 +159,33 @@
     <Content Include="Assets\Images\placeholdit1280x400.png" />
     <Content Include="Assets\Images\placeholdit1280x600.png" />
     <Content Include="Assets\Images\placeholdit400x300.png" />
-    <Content Include="Assets\Photos\bayahibe.jpg" />
-    <Content Include="Assets\Photos\bocachica.jpg" />
-    <Content Include="Assets\Photos\juandolio.jpg" />
-    <Content Include="Assets\Photos\puertoplata.jpg" />
-    <Content Include="Assets\Photos\puntacana.png" />
+    <Content Include="Assets\Photos\Hotels\be-live-canoa\01.jpg" />
+    <Content Include="Assets\Photos\Hotels\be-live-marien\01.jpg" />
+    <Content Include="Assets\Photos\Hotels\bluebays-villas-doradas\01.jpg" />
+    <Content Include="Assets\Photos\Hotels\catalonia-dominicus\01.jpg" />
+    <Content Include="Assets\Photos\Hotels\dominican-bay-boca-chica\01.jpg" />
+    <Content Include="Assets\Photos\Hotels\don-juan-boca-chica\01.jpg" />
+    <Content Include="Assets\Photos\Hotels\dreams-la-romana\01.jpg" />
+    <Content Include="Assets\Photos\Hotels\emotions\01.jpg" />
+    <Content Include="Assets\Photos\Hotels\excellence\01.jpg" />
+    <Content Include="Assets\Photos\Hotels\hamaca-beach\01.jpg" />
+    <Content Include="Assets\Photos\Hotels\hamaca-garden\01.jpg" />
+    <Content Include="Assets\Photos\Hotels\hard-rock\01.jpg" />
+    <Content Include="Assets\Photos\Hotels\hodelpa-garden-suite\01.jpg" />
+    <Content Include="Assets\Photos\Hotels\hotel-barcelo-deluxe-paradise\01.jpg" />
+    <Content Include="Assets\Photos\Hotels\hotel-barcelo-palace-deluxe\01.jpg" />
+    <Content Include="Assets\Photos\Hotels\iberoestar-costa-dorada\01.jpg" />
+    <Content Include="Assets\Photos\Hotels\iberoestar-hacienda\01.jpg" />
+    <Content Include="Assets\Photos\Hotels\lifestyle-tropical-beach\01.jpg" />
+    <Content Include="Assets\Photos\Hotels\nickelodeon\01.jpg" />
+    <Content Include="Assets\Photos\Hotels\paradisus-palma-real\01.jpg" />
+    <Content Include="Assets\Photos\Hotels\sunscape\01.jpg" />
+    <Content Include="Assets\Photos\Hotels\viva-whyndham-dominicus-beach\01.jpg" />
+    <Content Include="Assets\Photos\Locations\bayahibe\01.jpg" />
+    <Content Include="Assets\Photos\Locations\boca-chica\01.jpg" />
+    <Content Include="Assets\Photos\Locations\juan-dolio\01.jpg" />
+    <Content Include="Assets\Photos\Locations\puerto-plata\01.jpg" />
+    <Content Include="Assets\Photos\Locations\punta-cana\01.png" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\img\img-1.jpg" />
@@ -217,6 +239,7 @@
     <Content Include="Views\Location\Index.cshtml" />
     <Content Include="Views\Home\Index2.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Location\Detail.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

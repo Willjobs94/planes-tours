@@ -16,9 +16,10 @@ namespace PlanesTour.Data.Migrations
             AutomaticMigrationsEnabled = false;
         }
 
-        private readonly string photoRootPath = ConfigurationManager.AppSettings.Get("PhotosRootPath");
+        private readonly string locationPhotosPath = ConfigurationManager.AppSettings.Get("LocationPhotoPath");
+        private readonly string hotelsPhotoPath = ConfigurationManager.AppSettings.Get("HotelPhotoPath");
         private readonly string imageRootPath = ConfigurationManager.AppSettings.Get("ImagesRootPath");
-        protected override void Seed(PlanesTour.Data.PlanesTourDbContext context)
+        protected override void Seed(PlanesTourDbContext context)
         {
 
             #region Offert List
@@ -32,7 +33,7 @@ namespace PlanesTour.Data.Migrations
                     StartDate = DateTime.Now.AddDays(2),
                     ExpirationDate = DateTime.Now.AddDays(7),
                     OffertAmount = 100,
-                    ImagePath = Path.Combine(imageRootPath, "placeholdit400x300")
+                    ImagePath = Path.Combine(imageRootPath, "")
                 },
 
                 new Offert
@@ -82,45 +83,190 @@ namespace PlanesTour.Data.Migrations
                 context.Offerts.AddOrUpdate(a => a.Description, offert);
             }
             #endregion
-          
+
             #region Photo List
             var photoList = new List<Photo>
             {
+
+                #region Locations
                 new Photo
                 {
-                    Path = Path.Combine(photoRootPath, "bocachica.jpg"),
+                    Path = Path.Combine(locationPhotosPath, "boca-chica", "01.jpg").Replace('\\', '/'),
                     Description =  "Boca Chica's Beach"
                 },
 
                 new Photo
                 {
-                    Path = Path.Combine(photoRootPath, "juandolio.jpg"),
+                    Path = Path.Combine(locationPhotosPath, "juan-dolio", "01.jpg").Replace('\\', '/'),
                     Description = "Juan Dolio's Beach"
                 },
 
                 new Photo
                 {
-                    Path = Path.Combine(photoRootPath, "bayahibe.png"),
+                    Path = Path.Combine(locationPhotosPath, "bayahibe", "01.jpg").Replace('\\', '/'),
                     Description = "Bayahibe"
                 },
 
                 new Photo
                 {
-                    Path = Path.Combine(photoRootPath, "puntacana.jpg"),
+                    Path = Path.Combine(locationPhotosPath, "punta-cana", "01.png").Replace('\\', '/'),
                     Description = "Punta Cana"
                 },
 
                 new Photo
                 {
-                    Path = Path.Combine(photoRootPath, "puertoplata.jpg"),
+                    Path = Path.Combine(locationPhotosPath, "puerto-plata", "01.jpg").Replace('\\', '/'),
                     Description = "Puerto Plata"
+                },
+
+                #endregion
+
+                #region Boca Chica
+                new Photo
+                {
+                    Path = Path.Combine(hotelsPhotoPath, "don-juan-boca-chica", "01.jpg").Replace('\\','/'),
+                    Description = "Don Juan Boca Chica"
                 },
 
                 new Photo
                 {
-                    Path = Path.Combine(imageRootPath, "placeholdit400x300.png"),
-                    Description = "Placeholder Image"
+                    Path = Path.Combine(hotelsPhotoPath, "dominican-bay-boca-chica", "01.jpg").Replace('\\','/'),
+                    Description = "Dominican Bay Boca Chica"
+                },
+
+
+                new Photo
+                {
+                    Path = Path.Combine(hotelsPhotoPath, "hamaca-beach", "01.jpg").Replace('\\','/'),
+                    Description = "Hamaca Beach"
+                },
+
+                new Photo
+                {
+                    Path = Path.Combine(hotelsPhotoPath, "hamaca-garden", "01.jpg").Replace('\\','/'),
+                    Description = "Hamaca Garden"
+                },
+
+                #endregion
+
+                #region Bayahibe
+                new Photo
+                {
+                    Path = Path.Combine(hotelsPhotoPath, "be-live-canoa", "01.jpg").Replace('\\','/'),
+                    Description = "Be live Canoa"
+                },
+
+                new Photo
+                {
+                    Path = Path.Combine(hotelsPhotoPath, "catalonia-dominicus", "01.jpg").Replace('\\','/'),
+                    Description = "Catalonia Dominicus"
+                },
+
+                new Photo
+                {
+                    Path = Path.Combine(hotelsPhotoPath, "dreams-la-romana", "01.jpg").Replace('\\','/'),
+                    Description = "Dreams La Romana"
+                },
+
+                new Photo
+                {
+                    Path = Path.Combine(hotelsPhotoPath, "iberoestar-hacienda", "01.jpg").Replace('\\','/'),
+                    Description = "Iberoestar Hacienda"
+                },
+
+                new Photo
+                {
+                    Path = Path.Combine(hotelsPhotoPath, "viva-whyndham-dominicus-beach", "01.jpg").Replace('\\','/'),
+                    Description = "Viva Whyndham Dominicus Beach"
+                },
+
+                #endregion
+
+                #region Juan Dolio
+
+                new Photo
+                {
+                    Path = Path.Combine(hotelsPhotoPath, "emotions", "01.jpg").Replace('\\','/'),
+                    Description = "Emotions"
+                },
+
+                new Photo
+                {
+                    Path = Path.Combine(hotelsPhotoPath, "hodelpa-garden-suite", "01.jpg").Replace('\\','/'),
+                    Description = "Hodelpa Garden Suite"
+                },
+                #endregion
+
+                #region Puerto Plata
+                new Photo
+                {
+                    Path = Path.Combine(hotelsPhotoPath, "be-live-marien", "01.jpg").Replace('\\','/'),
+                    Description = "Be Live Marien"
+                },
+
+                new Photo
+                {
+                    Path = Path.Combine(hotelsPhotoPath, "bluebays-villas-doradas", "01.jpg").Replace('\\','/'),
+                    Description = "Blue Bays Villas Doradas"
+                },
+
+                new Photo
+                {
+                    Path = Path.Combine(hotelsPhotoPath, "iberoestar-costa-dorada", "01.jpg").Replace('\\','/'), 
+                    Description = "Iberoestar Costa Dorada"
+                },
+
+                new Photo
+                {
+                    Path = Path.Combine(hotelsPhotoPath, "lifestyle-tropical-beach", "01.jpg").Replace('\\','/'),
+                    Description = "Life Style Tropical Beach"
+                },
+
+                new Photo
+                {
+                    Path = Path.Combine(hotelsPhotoPath, "sunscape", "01.jpg").Replace('\\','/'),
+                    Description = "Sunscape"
+                },
+                #endregion
+
+                #region Punta Cana
+                new Photo
+                {
+                    Path = Path.Combine(hotelsPhotoPath, "hard-rock", "01.jpg").Replace('\\','/'),
+                    Description = "Hard Rock"
+                },
+
+                new Photo
+                {
+                    Path = Path.Combine(hotelsPhotoPath, "hotel-barcelo-deluxe-paradise", "01.jpg").Replace('\\','/'),
+                    Description = "Hotel Barcelo Deluxe Paradise"
+                },
+
+                new Photo
+                {
+                    Path = Path.Combine(hotelsPhotoPath, "hotel-barcelo-palace-deluxe", "01.jpg").Replace('\\','/'),
+                    Description = "Hotel Barcelo Palace Deluxe"
+                },
+
+                new Photo
+                {
+                    Path = Path.Combine(hotelsPhotoPath, "excellence", "01.jpg").Replace('\\','/'),
+                    Description = "Hotel Excellence"
+                },
+
+                new Photo
+                {
+                    Path = Path.Combine(hotelsPhotoPath, "nickelodeon", "01.jpg").Replace('\\','/'),
+                    Description = "Nickelodeon"
+                },
+
+                new Photo
+                {
+                    Path = Path.Combine(hotelsPhotoPath, "paradisus-palma-real", "01.jpg").Replace('\\','/'),
+                    Description = "Paradisus Palma Real"
                 }
+
+                #endregion
 
             };
             foreach (var photo in photoList)
@@ -164,32 +310,22 @@ namespace PlanesTour.Data.Migrations
             }
             #endregion
 
+            #region LocationPhoto List
+            foreach (var location in context.Locations)
+            {
+                var locationPhoto = new LocationPhoto
+                {
+                    LocationId = location.Id,
+                    PhotoId = location.Id
+                };
+                context.LocationPhotos.AddOrUpdate(a => a.LocationId, locationPhoto);
+            }
+            #endregion
+
             #region Hotel List
             var hotelLIst = new List<Hotel>
             {
-                new Hotel
-                {
-                    Name = "Be Live Hamaca Garden",
-                    LocationId = 1
-                },
-
-                new Hotel
-                {
-                    Name = "Be Live Hamaca Beach",
-                    LocationId = 1
-                },
-
-                new Hotel
-                {
-                    Name = "Be Live Hamaca suites",
-                    LocationId = 1
-                },
-
-                new Hotel
-                {
-                     Name = "Hotel Don Juan",
-                     LocationId = 1
-                },
+                #region Boca Chica
 
                 new Hotel
                 {
@@ -199,14 +335,35 @@ namespace PlanesTour.Data.Migrations
 
                 new Hotel
                 {
-                    Name = "Hotel Coral Costa Caribe",
-                    LocationId = 2
+                        Name = "Hotel Don Juan",
+                        LocationId = 1
+                },
+
+
+                new Hotel
+                {
+                    Name = "Be Live Hamaca Beach",
+                    LocationId = 1
                 },
 
                 new Hotel
                 {
-                    Name = "Emotions by Hodelma",
-                    LocationId = 2
+                    Name = "Be Live Hamaca Garden",
+                    LocationId = 1
+                },
+                #endregion
+
+                #region Bayahibe
+                new Hotel
+                {
+                    Name = "Be Live Canoa",
+                    LocationId = 3
+                },
+
+                new Hotel
+                {
+                    Name = "Catalonia Dominicus",
+                    LocationId = 3
                 },
 
                 new Hotel
@@ -223,55 +380,30 @@ namespace PlanesTour.Data.Migrations
 
                 new Hotel
                 {
-                    Name = "Catalonia",
-                    LocationId = 3
-                },
-
-                new Hotel
-                {
-                    Name = "Hotel Be Live Canoa",
-                    LocationId = 3
-                },
-
-                new Hotel
-                {
                     Name = "Viva Wyndham Dominican Beach",
                     LocationId = 3
                 },
 
+                #endregion
+
+                #region Juan Dolio
                 new Hotel
                 {
-                    Name = "Barcelo Bavaro Beach",
-                    LocationId = 4
+                    Name = "Emotions",
+                    LocationId = 2
                 },
 
                 new Hotel
                 {
-                    Name = "Hotel Hard Rock",
-                    LocationId = 4
+                    Name = "Hodelpal Garden Suite",
+                    LocationId = 2
                 },
+                #endregion
 
+                #region Puerto Plata
                 new Hotel
                 {
-                    Name = "Hotel Now Larimar",
-                    LocationId = 4
-                },
-
-                new Hotel
-                {
-                    Name = "Hotel Paradisus Punta Cana",
-                    LocationId = 4
-                },
-
-                new Hotel
-                {
-                    Name = "Hotel Bavaro Princess",
-                    LocationId = 4
-                },
-
-                new Hotel
-                {
-                    Name = "iberostar Costa Dorada",
+                    Name = "Be Live Marien",
                     LocationId = 5
                 },
 
@@ -283,13 +415,7 @@ namespace PlanesTour.Data.Migrations
 
                 new Hotel
                 {
-                    Name = "Riu Merengue",
-                    LocationId = 5
-                },
-
-                new Hotel
-                {
-                    Name = "Riu Bachata",
+                    Name = "Iberostar Costa Dorada",
                     LocationId = 5
                 },
 
@@ -297,32 +423,69 @@ namespace PlanesTour.Data.Migrations
                 {
                     Name = "Lifestyle Tropical Beach",
                     LocationId = 5
-                }
+                },
+
+                new Hotel
+                {
+                    Name = "Sunscape",
+                    LocationId = 5
+                },
+                #endregion
+
+                #region Punta Cana
+                new Hotel
+                {
+                    Name = "Hard Rock",
+                    LocationId = 4
+                },
+
+                new Hotel
+                {
+                    Name = "Barcelo Deluxe Paradise",
+                    LocationId = 4
+                },
+
+
+                new Hotel
+                {
+                    Name = "Barcelo Palace Deluxe",
+                    LocationId = 4
+                },
+
+                new Hotel
+                {
+                    Name = "Excellence",
+                    LocationId = 4
+                },
+
+                new Hotel
+                {
+                    Name = "Nickelodeon",
+                    LocationId = 4
+                },
+
+                new Hotel
+                {
+                    Name = "Paradisus Palma Real",
+                    LocationId = 4
+                },
+                #endregion
+
             };
             hotelLIst.ForEach(hotel => context.Hotels.AddOrUpdate(a => a.Name, hotel));
             #endregion
 
-            #region LocationPhoto List
-            foreach (var location in context.Locations)
-            {
-                var locationPhoto = new LocationPhoto
-                {
-                    LocationId = location.Id,
-                    PhotoId = location.Id
-                };
-                context.LocationPhotos.AddOrUpdate(a => a.LocationId, locationPhoto);
-            }
-            #endregion
-
             #region HotelPhotoList
+            var photoid = 6;
             foreach (var hotel in context.Hotels)
             {
                 var hotelPhoto = new HotelPhoto
                 {
                     HotelId = hotel.Id,
-                    PhotoId = 6
+                    PhotoId = photoid
                 };
                 context.HotelPhotos.AddOrUpdate(a => a.HotelId, hotelPhoto);
+                photoid++;
             }
             #endregion
         }

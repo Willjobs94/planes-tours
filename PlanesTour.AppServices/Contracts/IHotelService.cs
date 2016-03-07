@@ -13,6 +13,6 @@ namespace PlanesTour.AppServices.Contracts
         void UpdateViewCount(int hotelId);
         List<Hotel> GetAllHotels();
         List<Hotel> GetAllHotels(int amount);
-        IEnumerable<Hotel> GetAllHotelsByLocationDescendent(int locationId);
+        IEnumerable<Hotel> GetAllHotelsByLocationDescendent(int? locationId);
     }
 }

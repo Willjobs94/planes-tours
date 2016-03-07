@@ -12,22 +12,23 @@ namespace PlanesTour
         public static void RegisterRoutes(RouteCollection routes)
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
+            routes.LowercaseUrls = true;
 
             routes.MapRoute(
-                name: "location detail",
-                url : "locations/{id}",
-                defaults : new {controller = "Location", action = "Detail"},
-                constraints: new {id = @"\d+"}
+                name: "location", 
+                url: "locations/{url}",
+                defaults: new { controller = "Location", action = "Detail" },
+                constraints: new { url = @"\d+"}
             );
 
             routes.MapRoute(
-                name: "Default for Location",
+                name: "locations",
                 url: "locations/{action}",
-                defaults: new { controller = "Location" , action = "index"}
+                defaults: new { controller = "Location", action = "Detail" }
             );
 
             routes.MapRoute(
-                name: "Default",
+            name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );

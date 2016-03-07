@@ -18,7 +18,7 @@ namespace PlanesTour.Repository
             return GetAllHotels().OrderByDescending(a => a.Location.Name).ToList();
         }
 
-        public IEnumerable<Hotel> GetHotelsByLocation(int locationId)
+        public IEnumerable<Hotel> GetHotelsByLocation(int? locationId)
         {
             return GetHotelsByLocation().Where(a => a.LocationId == locationId).ToList();
         }

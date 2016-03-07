@@ -41,7 +41,7 @@ namespace PlanesTour.AppServices
             _hotelRepository.SaveChanges(); 
         }
 
-        public IEnumerable<Hotel> GetAllHotelsByLocationDescendent(int locationId)
+        public IEnumerable<Hotel> GetAllHotelsByLocationDescendent(int? locationId)
         {
             return _hotelRepository.GetHotelsByLocation(locationId);
         }

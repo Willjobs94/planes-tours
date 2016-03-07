@@ -21,7 +21,7 @@ namespace PlanesTour.AppServices
             return _locationRepository.GetLocationsDescendingByName();
         }
 
-        public Location GetLocationById(int locationId)
+        public Location GetLocationById(int? locationId)
         {
             return _locationRepository.GetLocationsDescendingByName()
                 .Where(a => a.Id == locationId).FirstOrDefault();

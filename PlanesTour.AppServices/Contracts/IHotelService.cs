@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using PlanesTour.Core.Domain;
 
 namespace PlanesTour.AppServices.Contracts
@@ -11,8 +7,10 @@ namespace PlanesTour.AppServices.Contracts
     {
         void CreateNewHotel(Hotel hotel);
         void UpdateViewCount(int hotelId);
-        List<Hotel> GetAllHotels();
-        List<Hotel> GetAllHotels(int amount);
-        IEnumerable<Hotel> GetAllHotelsByLocationDescendent(int? locationId);
+        IEnumerable<Hotel> GetAllHotels();
+        IEnumerable<Hotel> GetAllHotels(int amount);
+        IEnumerable<Hotel> GetAllHotelsWithPhotos(int amount);
+        IEnumerable<Hotel> GetAllHotelsByLocationDescendent(int locationId);
+        
     }
 }

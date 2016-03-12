@@ -4,8 +4,6 @@ using PlanesTour.Repository.Contracts;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PlanesTour.AppServices
 {
@@ -15,12 +13,12 @@ namespace PlanesTour.AppServices
         {
             _offertRepository = offertRepository;
         }
-        public List<Offert>GetActiveOfferts()
+        public List<Offer>GetActiveOfferts()
         {
             
-            return _offertRepository.GetAllOfferts().Where(a => a.ExpirationDate > DateTime.Now).ToList();
+            return _offertRepository.GetAllOffers().Where(a => a.ExpirationDate > DateTime.Now).ToList();
         }
-        public List<Offert>GetActiveOfferts(int amount)
+        public List<Offer>GetActiveOfferts(int amount)
         {
            return GetActiveOfferts().Take(amount).ToList();
         }

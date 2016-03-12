@@ -22,7 +22,7 @@ namespace PlanesTour.Core.Domain
         /// <summary>
         /// Indicates is a feedback have been aproved for the admin to be shown
         /// </summary>
-        public bool isAproved { get; set; }
+        public bool IsAproved { get; set; }
         #endregion
 
         #region Navigation Properties

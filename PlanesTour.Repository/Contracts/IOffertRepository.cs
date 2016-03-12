@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using PlanesTour.Core.Domain;
 namespace PlanesTour.Repository.Contracts
 {
-    public interface IOffertRepository : IBaseRepository<Offert>
+    public interface IOffertRepository : IBaseRepository<Offer>
     {
-        List<Offert> GetAllOfferts();
+        IEnumerable<Offer> GetAllOffers();
     }
 }

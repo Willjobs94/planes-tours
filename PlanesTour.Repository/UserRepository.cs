@@ -1,9 +1,5 @@
 ﻿using PlanesTour.Repository.Contracts;
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using PlanesTour.Core.Domain;
 using PlanesTour.Data;
 namespace PlanesTour.Repository

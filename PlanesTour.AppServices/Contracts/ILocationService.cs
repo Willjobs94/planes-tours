@@ -1,15 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using PlanesTour.Core.Domain;
 
 namespace PlanesTour.AppServices.Contracts
 {
     public interface ILocationService
     {
-        IEnumerable<Location> GetAllLocationsDescendingByName();
+        IEnumerable<Location> GetAllLocations();
+        IEnumerable<Location> GetAllLocationsWithPhotos();
         Location GetLocationById(int? locationId);
     }
 }

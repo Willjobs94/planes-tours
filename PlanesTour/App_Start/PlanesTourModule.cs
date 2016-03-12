@@ -6,6 +6,7 @@ using PlanesTour.Repository;
 using PlanesTour.AppServices.Contracts;
 using PlanesTour.Repository.Contracts;
 
+// ReSharper disable once CheckNamespace
 namespace PlanesTour.App_Start
 {
     public class PlanesTourModule : NinjectModule
@@ -17,7 +18,7 @@ namespace PlanesTour.App_Start
             Kernel.Bind<IHotelRepository>().To<HotelRepository>();
             Kernel.Bind<IFeedbackRepository>().To<FeedbackRepository>();
             Kernel.Bind<ILocationRepository>().To<LocationRepository>();
-            Kernel.Bind<IOffertRepository>().To<OffertRepository>();
+            Kernel.Bind<IOffertRepository>().To<OfferRepository>();
 
             Kernel.Bind<IHotelService>().To<HotelService>();
             Kernel.Bind<IOffertService>().To<OffertService>();

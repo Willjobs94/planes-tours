@@ -1,13 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PlanesTour.Core.Domain
 {
-    public class Offert : EntityBase
+    public class Offer : EntityBase
     {
         /// <summary>
         /// Hotel in which the offer applies 

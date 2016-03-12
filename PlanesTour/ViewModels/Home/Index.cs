@@ -5,7 +5,7 @@ namespace PlanesTour.ViewModels.Home
 {
     public class Index
     {
-        public IEnumerable<Offert> Offerts { get; set; }
+        public IEnumerable<Offer> Offerts { get; set; }
         public IEnumerable<Hotel> Hotels { get; set; }
     }
 }

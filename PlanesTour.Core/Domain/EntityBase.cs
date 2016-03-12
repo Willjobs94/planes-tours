@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace PlanesTour.Core
+namespace PlanesTour.Core.Domain
 {
     /// <summary>
     /// Where inherit all system classes, avoid duplucation and helps to keep the models clean

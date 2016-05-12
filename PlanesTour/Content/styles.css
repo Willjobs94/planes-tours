@@ -399,7 +399,7 @@ header .header-lead {
 }
 .owl-custom .prev,
 .owl-custom .next {
-  background-color: rgba(19, 19, 19, 0.6);
+    background-color: rgba(19, 19, 19, 0.6);
   border-radius: 3px;
   color: white;
   cursor: pointer;
@@ -407,9 +407,18 @@ header .header-lead {
   padding: 18px 24px;
   position: absolute;
   top: 33%;
-  transform: traslateY(-50%);
-  transition: all .3s ease;
+    -webkit-transform: traslateY(-50%);
+    -moz-transform: traslateY(-50%);
+    -ms-transform: traslateY(-50%);
+    -o-transform: traslateY(-50%);
+    transform: traslateY(-50%);
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
 }
+
 .owl-custom .prev > span,
 .owl-custom .next > span {
   font-size: 44px;

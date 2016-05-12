@@ -1,0 +1,83 @@
+﻿@using PlanesTour.Helpers
+@model PlanesTour.ViewModels.Hotel.Detail
+<main>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7">
+                    <!-- Hotel Detail - Heading -->
+                    <div class="hotel-detail-heading">
+                        <h3 class="hotel-detail-title">@Model.Hotel.Name</h3>
+                        <ul class="hotel-detail-meta list-unstyled">
+                            <li>
+                                Destino: <a href="/locations/@UrlHelperExtetions.SeoUrl(Model.Hotel.LocationId, Model.Hotel.Location.Name.SanitizeUrl())" 
+                                            class="text-gray">@Model.Hotel.Location.Name</a>
+                            </li>
+                            <li>
+                                <div class="star-rater">
+                                    <span>Calificacion: </span>
+                                    <span class="fa fa-star rating"></span>
+                                    <span class="fa fa-star rating"></span>
+                                    <span class="fa fa-star rating"></span>
+                                    <span class="fa fa-star rating"></span>
+                                    <span class="fa fa-star"></span>
+                                </div>
+                            </li>
+                            <li>
+                                Visitas: <span class="text-gray">@Model.Hotel.ViewCount</span>
+                            </li>
+                            <li class="price">
+                                <span class="badge badge-price">Desde US$200.00</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Hotel Detail - Carousel -->
+                    <div class="owl-custom">
+                        <ul id="owl-hotel-detail" class="owl-carousel owl-theme list-unstyled">
+                            @foreach (var photo in Model.Hotel.Photos)
+                            {
+                            <li>
+                                <div class="owl-hotel-detail-item" style="background-image: url('@photo.Path')"></div>
+                            </li>
+  
+                            }
+                        </ul>
+                        <div class="prev prev-3">
+                            <span class="fa fa-angle-left"></span>
+                        </div>
+                        <div class="next next-3">
+                            <span class="fa fa-angle-right"></span>
+                        </div>
+                    </div>
+
+                    <!-- Hotel Detail - Content -->
+                    <div class="hotel-content">
+                        <h4>Detalles de hotel:</h4>
+                        <p>
+                            @Model.Hotel.Description
+                        </p>
+                       @* <a href="" class="btn btn-primary btn-xl">Hacer Reservación</a>*@
+
+                        <hr>
+
+                        <div class="feedback-principal">
+                            <img class="feedback-img" src="~/Assets/Photos/ceo.jpg">
+                            <div class="feedback-content">
+                                <span class="feedback-title">
+                                    <strong>Joaquin Bello</strong> - Gerente General
+                                </span>
+                                <p class="lead">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Related Hotels -->
+                <div class="col-md-4 col-md-offset-1 hidden-sm hidden-xs">
+                    @Html.Partial("_RelatedHotelsPartial", Model.RelatedHotels);
+                </div>
+            </div>
+        </div>
+    </section>
+</main>

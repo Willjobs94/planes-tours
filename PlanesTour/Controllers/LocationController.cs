@@ -1,5 +1,6 @@
 ﻿using PlanesTour.AppServices.Contracts;
 using System.Web.Mvc;
+using PlanesTour.Helpers;
 
 namespace PlanesTour.Controllers
 {
@@ -13,9 +14,10 @@ namespace PlanesTour.Controllers
         public ActionResult Index() 
             => View(_locationService.GetAllLocationsWithPhotos());
 
+
         public ActionResult Detail(string url)
         {
-            var locationId = GetIdFromUrl(url);
+            var locationId = UrlHelperExtetions.GetIdFromUrl(url);
             if (locationId == 0)
             {
                 return RedirectToAction("index");
@@ -24,15 +26,13 @@ namespace PlanesTour.Controllers
             return View(_hotelService.GetAllHotelsByLocationIdWithPhotos(locationId));
         }
 
-        private static int GetIdFromUrl(string url)
+        [ChildActionOnly]
+        public ActionResult GetLocations()
         {
-            var id = 0;
-            if (string.IsNullOrEmpty(url) || string.IsNullOrWhiteSpace(url) || !int.TryParse(url, out id))
-            {
-                return 0;
-            }
-            return id;
+            var locationList = _locationService.GetAllLocations();
+            return PartialView("_LocationListDropdownPartial", locationList);
         }
+
         private readonly ILocationService _locationService;
         private readonly IHotelService _hotelService;
     }

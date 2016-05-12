@@ -5,7 +5,6 @@ namespace PlanesTour.AppServices.Contracts
 {
     public interface IOffertService
     {
-        List<Offer> GetActiveOfferts();
-        List<Offer> GetActiveOfferts(int amount);
+        IEnumerable<Offer> GetActiveOfferts(int amount);
     }
 }

@@ -5,9 +5,7 @@ using PlanesTour.ViewModels.Home;
 namespace PlanesTour.Controllers
 {
     public class HomeController : Controller
-    {
-
-        
+    {   
         public HomeController(IHotelService hotelService, IOffertService offertService)
         {
             _hotelService = hotelService;
@@ -36,7 +34,6 @@ namespace PlanesTour.Controllers
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";
-
             return View();
         }
 

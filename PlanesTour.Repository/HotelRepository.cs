@@ -6,20 +6,19 @@ using PlanesTour.Repository.Contracts;
 using PlanesTour.Data;
 namespace PlanesTour.Repository
 {
-    public abstract class HotelRepository : BaseRepository<Hotel>, IHotelRepository
+    public class HotelRepository : BaseRepository<Hotel>, IHotelRepository
     {
-        protected HotelRepository(PlanesTourDbContext context) : base(context) { }
+        public HotelRepository(PlanesTourDbContext context) : base(context) { }
 
-        public IEnumerable<Hotel> GetAllHotels() 
+        public Hotel GetHotelById(int hotelId)
+            => GetById(hotelId);
+
+        public IEnumerable<Hotel> GetAllHotels()
             => GetAll().Include(a => a.Location).OrderByDescending(a => a.Name);
 
-        public IEnumerable<Hotel> GetAllHotels(int amount)
+        private IEnumerable<Hotel> GetAllHotels(int amount)
             => GetAll().Take(amount).Include(a => a.Location)
-                .OrderByDescending(a => a.Name); 
-
-        public IEnumerable<Hotel> GetHotelsByLocationId(int locationId)
-            => GetAllHotels()
-                .Where(a => a.LocationId == locationId).ToList();
+                .OrderByDescending(a => a.Name);
 
         public IEnumerable<Hotel> GetAllHotelsWithPhotos(int amount)
         {
@@ -27,11 +26,22 @@ namespace PlanesTour.Repository
             hotelList.ForEach(a => a.Photos = Context.HotelPhotos
                 .Where(b => b.HotelId == a.Id)
                 .Select(c => c.Photo)
-                .ToList());          
+                .ToList());
             return hotelList;
         }
 
-        public Hotel GetHotelById(int hotelId) 
-            => GetById(hotelId);
+        private IEnumerable<Hotel> GetHotelsByLocationId(int locationId)
+            => GetAllHotels()
+                .Where(a => a.LocationId == locationId);
+
+        public IEnumerable<Hotel> GetAllHotelsByLocationIdWithPhotos(int locationId)
+        {
+            var hotelList = GetHotelsByLocationId(locationId).ToList();
+            hotelList.ForEach(a => a.Photos = Context.HotelPhotos
+                .Where(b => b.HotelId == a.Id)
+                .Select(c => c.Photo)
+                .ToList());
+            return hotelList;
+        }
     }
 }

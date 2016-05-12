@@ -7,8 +7,8 @@ namespace PlanesTour.Repository
 {
     public class BaseRepository<T> : IBaseRepository<T> where  T : class
     {
-        protected PlanesTourDbContext Context;
-        protected DbSet<T> DbSet;
+        protected readonly PlanesTourDbContext Context;
+        protected readonly DbSet<T> DbSet;
 
         public BaseRepository(PlanesTourDbContext context)
         {

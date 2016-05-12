@@ -7,7 +7,7 @@ using System.Linq;
 
 namespace PlanesTour.AppServices
 {
-    public class OffertService : IOffertService
+    public  class OffertService : IOffertService
     {
         public OffertService(IOffertRepository offertRepository)
         {
@@ -18,7 +18,7 @@ namespace PlanesTour.AppServices
             
             return _offertRepository.GetAllOffers().Where(a => a.ExpirationDate > DateTime.Now).ToList();
         }
-        public List<Offer>GetActiveOfferts(int amount)
+        public IEnumerable<Offer> GetActiveOfferts(int amount)
         {
            return GetActiveOfferts().Take(amount).ToList();
         }

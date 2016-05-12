@@ -6,9 +6,9 @@ using PlanesTour.Repository.Contracts;
 using PlanesTour.Data;
 namespace PlanesTour.Repository
 {
-    public abstract class LocationRepository : BaseRepository<Location>, ILocationRepository
+    public class LocationRepository : BaseRepository<Location>, ILocationRepository
     {
-        protected LocationRepository(PlanesTourDbContext context) : base(context) { }
+        public LocationRepository(PlanesTourDbContext context) : base(context) { }
 
         public IEnumerable<Location> GetAllLocations() => GetAll();
 

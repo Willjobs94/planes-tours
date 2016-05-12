@@ -5,39 +5,19 @@ using PlanesTour.Core.Domain;
 
 namespace PlanesTour.AppServices
 {
+    // ReSharper disable once ClassNeverInstantiated.Global
     public class HotelService : IHotelService
     {
-
         public HotelService(IHotelRepository hotelRespository)
         {
             _hotelRepository = hotelRespository;
         }
 
-        public void CreateNewHotel(Hotel hotel)
-        {
-            _hotelRepository.Add(hotel);
-            _hotelRepository.SaveChanges();
-        }
-
-        public IEnumerable<Hotel> GetAllHotels()
-            => _hotelRepository.GetAllHotels();
-
-        public IEnumerable<Hotel> GetAllHotels(int amount)
-            => _hotelRepository.GetAllHotels(amount);
-
         public IEnumerable<Hotel> GetAllHotelsWithPhotos(int amount)
             => _hotelRepository.GetAllHotelsWithPhotos(amount);
 
-        public void UpdateViewCount(int hotelId)
-        {
-            var hotel = _hotelRepository.GetHotelById(hotelId);
-            if (hotel == null) return;
-            hotel.ViewCount++;
-            _hotelRepository.SaveChanges(); 
-        }
-
-        public IEnumerable<Hotel> GetAllHotelsByLocationDescendent(int locationId)
-            => _hotelRepository.GetHotelsByLocationId(locationId);
+        public IEnumerable<Hotel> GetAllHotelsByLocationIdWithPhotos(int locationId)
+            => _hotelRepository.GetAllHotelsByLocationIdWithPhotos(locationId);
 
         private readonly IHotelRepository _hotelRepository;
     }

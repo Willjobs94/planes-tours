@@ -6,8 +6,7 @@ namespace PlanesTour.Repository.Contracts
     {
         Hotel GetHotelById(int hotelId);
         IEnumerable<Hotel> GetAllHotels();
-        IEnumerable<Hotel> GetAllHotels(int amount);
         IEnumerable<Hotel> GetAllHotelsWithPhotos(int amount);
-        IEnumerable<Hotel> GetHotelsByLocationId(int locationId);
+        IEnumerable<Hotel> GetAllHotelsByLocationIdWithPhotos(int locationId);
     }
 }

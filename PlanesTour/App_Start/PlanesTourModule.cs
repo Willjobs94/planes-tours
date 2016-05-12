@@ -16,7 +16,6 @@ namespace PlanesTour.App_Start
             Kernel.Bind<PlanesTourDbContext>().ToSelf().InRequestScope();
 
             Kernel.Bind<IHotelRepository>().To<HotelRepository>();
-            Kernel.Bind<IFeedbackRepository>().To<FeedbackRepository>();
             Kernel.Bind<ILocationRepository>().To<LocationRepository>();
             Kernel.Bind<IOffertRepository>().To<OfferRepository>();
 

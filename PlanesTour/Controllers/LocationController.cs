@@ -15,18 +15,18 @@ namespace PlanesTour.Controllers
 
         public ActionResult Detail(string url)
         {
-            int locationId = GetIdFromUrl(url);
+            var locationId = GetIdFromUrl(url);
             if (locationId == 0)
             {
                 return RedirectToAction("index");
             }
             ViewBag.LocationName = _locationService.GetLocationById(locationId).Name;
-            return View(_hotelService. (locationId));
+            return View(_hotelService.GetAllHotelsByLocationIdWithPhotos(locationId));
         }
 
-        private int GetIdFromUrl(string url)
+        private static int GetIdFromUrl(string url)
         {
-            int id = 0;
+            var id = 0;
             if (string.IsNullOrEmpty(url) || string.IsNullOrWhiteSpace(url) || !int.TryParse(url, out id))
             {
                 return 0;

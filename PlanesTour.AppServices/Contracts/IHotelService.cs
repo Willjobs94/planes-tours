@@ -5,12 +5,7 @@ namespace PlanesTour.AppServices.Contracts
 {
     public interface IHotelService 
     {
-        void CreateNewHotel(Hotel hotel);
-        void UpdateViewCount(int hotelId);
-        IEnumerable<Hotel> GetAllHotels();
-        IEnumerable<Hotel> GetAllHotels(int amount);
         IEnumerable<Hotel> GetAllHotelsWithPhotos(int amount);
-        IEnumerable<Hotel> GetAllHotelsByLocationDescendent(int locationId);
-        
+        IEnumerable<Hotel> GetAllHotelsByLocationIdWithPhotos(int locationId);
     }
 }

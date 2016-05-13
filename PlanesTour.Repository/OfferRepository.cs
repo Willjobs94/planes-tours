@@ -8,6 +8,10 @@ namespace PlanesTour.Repository
     {
         public OfferRepository(PlanesTourDbContext context) : base(context) { }
 
-        public IEnumerable<Offer> GetAllOffers() => GetAll();     
+        public Offer GetOfferById(int offerId) 
+            => GetById(offerId);
+
+        public IEnumerable<Offer> GetAllOffers()
+            => GetAll();
     }
 }

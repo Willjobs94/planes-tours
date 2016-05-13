@@ -48,7 +48,7 @@
     <Compile Include="Domain\HotelPhoto.cs" />
     <Compile Include="Domain\LocationPhoto.cs" />
     <Compile Include="Domain\Location.cs" />
-    <Compile Include="Domain\Offert.cs" />
+    <Compile Include="Domain\Offer.cs" />
     <Compile Include="Domain\Photo.cs" />
     <Compile Include="Domain\Reservation.cs" />
     <Compile Include="Domain\User.cs" />

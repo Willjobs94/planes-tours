@@ -5,6 +5,12 @@ namespace PlanesTour.Core.Domain
 {
     public class Offer : EntityBase
     {
+        #region Properties
+        /// <summary>
+        /// Title of the Offer
+        /// </summary>
+        [MaxLength(50)]
+        public string Title { get; set; }
         /// <summary>
         /// Hotel in which the offer applies 
         /// </summary>
@@ -36,6 +42,14 @@ namespace PlanesTour.Core.Domain
         /// </summary>
         [MaxLength(254)]
         public string ImagePath { get; set; }
+        #endregion
 
+        #region Navigation Properties
+
+        /// <summary>
+        /// Hotel Entity asociated with the offer
+        /// </summary>
+        public Hotel Hotel { get; set; }
+        #endregion
     }
 }

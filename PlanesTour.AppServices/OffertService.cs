@@ -13,16 +13,24 @@ namespace PlanesTour.AppServices
         {
             _offertRepository = offertRepository;
         }
-        public List<Offer>GetActiveOfferts()
-        {
-            
-            return _offertRepository.GetAllOffers().Where(a => a.ExpirationDate > DateTime.Now).ToList();
-        }
-        public IEnumerable<Offer> GetActiveOfferts(int amount)
-        {
-           return GetActiveOfferts().Take(amount).ToList();
-        }
+        public IEnumerable<Offer> GetActiveOfferts()
+            => _offertRepository.GetAllOffers()
+                .Where(a => a.ExpirationDate > DateTime.Now)
+                .ToList();
 
+        public IEnumerable<Offer> GetActiveOfferts(int amount) 
+            => GetActiveOfferts()
+                .Take(amount)
+                .ToList();
+
+        public Offer GetOfferById(int offerId)
+            => _offertRepository.GetOfferById(offerId);
+
+        public IEnumerable<Offer> GetAllOffers()
+            => _offertRepository.GetAllOffers().ToList();
+
+        public IEnumerable<Offer> GetAllOffers(int amount)
+            => GetAllOffers().Take(amount).ToList();
         private readonly IOffertRepository _offertRepository;
     }
 }

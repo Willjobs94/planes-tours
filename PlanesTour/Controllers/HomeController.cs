@@ -6,20 +6,20 @@ namespace PlanesTour.Controllers
 {
     public class HomeController : Controller
     {   
-        public HomeController(IHotelService hotelService, IOffertService offertService)
+        public HomeController(IHotelService hotelService, IOfferService offerService)
         {
             _hotelService = hotelService;
-            _offertService = offertService;
+            _offerService = offerService;
         }
 
         public ActionResult Index()
         {
             var hotels = _hotelService.GetAllHotelsWithPhotos(8);
-            var offerts = _offertService.GetAllOffers(5);
+            var offers = _offerService.GetAllOffers(5);
             var indexViewModel = new Index
             {
                 Hotels = hotels,
-                Offers = offerts
+                Offers = offers
             };
             return View(indexViewModel);
         }
@@ -38,6 +38,6 @@ namespace PlanesTour.Controllers
         }
 
         private readonly IHotelService _hotelService;
-        private readonly IOffertService _offertService;
+        private readonly IOfferService _offerService;
     }
 }

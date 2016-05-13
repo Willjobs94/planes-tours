@@ -62,6 +62,10 @@
     <Compile Include="Migrations\201605131615109_AddTitleFieldToOffer.Designer.cs">
       <DependentUpon>201605131615109_AddTitleFieldToOffer.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201605131745452_RenameOffertAmountFieldToOfferAmount.cs" />
+    <Compile Include="Migrations\201605131745452_RenameOffertAmountFieldToOfferAmount.Designer.cs">
+      <DependentUpon>201605131745452_RenameOffertAmountFieldToOfferAmount.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="PlanesTourDbContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -85,6 +89,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201605131615109_AddTitleFieldToOffer.resx">
       <DependentUpon>201605131615109_AddTitleFieldToOffer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201605131745452_RenameOffertAmountFieldToOfferAmount.resx">
+      <DependentUpon>201605131745452_RenameOffertAmountFieldToOfferAmount.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

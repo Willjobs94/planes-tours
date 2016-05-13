@@ -53,7 +53,7 @@
     <Compile Include="Contracts\IBaseRepository.cs" />
     <Compile Include="Contracts\IHotelRepository.cs" />
     <Compile Include="Contracts\ILocationRepository.cs" />
-    <Compile Include="Contracts\IOffertRepository.cs" />
+    <Compile Include="Contracts\IOfferRepository.cs" />
     <Compile Include="HotelRepository.cs" />
     <Compile Include="LocationRepository.cs" />
     <Compile Include="OfferRepository.cs" />

@@ -4,7 +4,7 @@ using PlanesTour.Core.Domain;
 using PlanesTour.Data;
 namespace PlanesTour.Repository
 {
-    public class OfferRepository : BaseRepository<Offer>, IOffertRepository
+    public class OfferRepository : BaseRepository<Offer>, IOfferRepository
     {
         public OfferRepository(PlanesTourDbContext context) : base(context) { }
 

@@ -47,7 +47,7 @@
     <Compile Include="HotelService.cs" />
     <Compile Include="Contracts\IHotelService.cs" />
     <Compile Include="LocationService.cs" />
-    <Compile Include="OffertService.cs" />
+    <Compile Include="OfferService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

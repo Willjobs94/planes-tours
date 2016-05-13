@@ -17,10 +17,10 @@ namespace PlanesTour.App_Start
 
             Kernel.Bind<IHotelRepository>().To<HotelRepository>();
             Kernel.Bind<ILocationRepository>().To<LocationRepository>();
-            Kernel.Bind<IOffertRepository>().To<OfferRepository>();
+            Kernel.Bind<IOfferRepository>().To<OfferRepository>();
 
             Kernel.Bind<IHotelService>().To<HotelService>();
-            Kernel.Bind<IOffertService>().To<OffertService>();
+            Kernel.Bind<IOfferService>().To<OfferService>();
             Kernel.Bind<ILocationService>().To<LocationService>();
 
             //throw new NotImplementedException();

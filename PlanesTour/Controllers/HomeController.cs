@@ -15,11 +15,11 @@ namespace PlanesTour.Controllers
         public ActionResult Index()
         {
             var hotels = _hotelService.GetAllHotelsWithPhotos(8);
-            var offerts = _offertService.GetActiveOfferts(3);
+            var offerts = _offertService.GetAllOffers(5);
             var indexViewModel = new Index
             {
                 Hotels = hotels,
-                Offerts = offerts
+                Offers = offerts
             };
             return View(indexViewModel);
         }

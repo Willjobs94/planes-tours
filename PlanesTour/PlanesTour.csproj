@@ -162,6 +162,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\HotelController.cs" />
     <Compile Include="Controllers\LocationController.cs" />
+    <Compile Include="Controllers\OfferController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -170,6 +171,7 @@
     <Compile Include="ViewModels\Home\Index.cs" />
     <Compile Include="ViewModels\Hotel\Detail.cs" />
     <Compile Include="ViewModels\Location\Index.cs" />
+    <Compile Include="ViewModels\Offer\Detail.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\Images\placeholdit1280x400.png" />
@@ -289,6 +291,7 @@
     <Content Include="Views\Hotel\Detail.cshtml" />
     <Content Include="Views\Shared\_RelatedHotelsPartial.cshtml" />
     <Content Include="Views\Shared\_LocationListDropdownPartial.cshtml" />
+    <Content Include="Views\Offer\Detail.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

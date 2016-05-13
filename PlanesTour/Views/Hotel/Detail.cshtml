@@ -73,10 +73,9 @@
                     </div>
                 </div>
 
-                <!-- Related Hotels -->
-                <div class="col-md-4 col-md-offset-1 hidden-sm hidden-xs">
-                    @Html.Partial("_RelatedHotelsPartial", Model.RelatedHotels);
-                </div>
+                <!-- Related Hotels -->              
+                @Html.Partial("_RelatedHotelsPartial", Model.RelatedHotels);
+               
             </div>
         </div>
     </section>

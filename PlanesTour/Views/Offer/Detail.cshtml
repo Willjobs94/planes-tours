@@ -1,0 +1,67 @@
+﻿@model PlanesTour.ViewModels.Offer.Detail
+@{
+    ViewBag.Title = "Detail -";
+}
+
+   <!-- Content -->
+<main>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7">
+                    <!-- Offer Detail - Heading -->
+                    <div class="offer-detail-heading">
+                        <h3 class="offer-detail-title">@Model.Offer.Title</h3>
+                        <ul class="offer-detail-meta list-unstyled">
+                            <li>
+                                Hoteles aplicables: <a href="" class="text-gray">@Model.Offer.Hotel.Name</a>
+                            </li>
+                            <li>
+                                Fecha: <span class="text-gray">Del @Model.Offer.StartDate.ToString("D") al @Model.Offer.ExpirationDate.ToString("D")</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Offer Detail - Image -->
+                    <div class="offer-detail-img">
+                        <img src="@Model.Offer.ImagePath" class="img-responsive" alt="@Model.Offer.Title">
+                    </div>
+
+                    <!-- Offer Detail - Contet -->
+                    <div class="offer-detail-content">
+                        <h4>Detalles de la oferta:</h4>
+                        <p>
+                            @Model.Offer.Description
+                        </p>
+                        <hr>
+
+                        @*<div class="share">
+                            <h4>Comparte esta oferta:</h4>
+                            <ul class="share-list list-unstyled">
+                                <li>
+                                    <button type="button" class="btn btn-facebook btn-social">
+                                        <span class="fa fa-facebook"></span> Facebook
+                                    </button>
+                                </li>
+                                <li>
+                                    <button type="button" class="btn btn-google btn-social">
+                                        <span class="fa fa-google"></span> Google Plus
+                                    </button>
+                                </li>
+                                <li>
+                                    <button type="button" class="btn btn-twitter btn-social">
+                                        <span class="fa fa-twitter"></span> Twitter
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>*@
+                    </div>
+                </div>
+
+                <!-- Related Hotels -->
+                @Html.Partial("_RelatedHotelsPartial", Model.RelatedHotels);
+            </div>
+        </div>
+    </section>
+</main>
+

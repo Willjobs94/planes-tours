@@ -25,60 +25,18 @@
 <section>
     <div class="container owl-custom">
         <ul id="owl-offers" class="owl-carousel owl-theme list-unstyled">
-            <li>
-                <div class="card-wide" style="background-image: url('/Content/img/img-1.jpg')">
-                    <a href="">
-                        <div class="card-content">
-                            <h3 class="card-title">Ahorra hasta un 50%</h3>
-                        </div>
-                    </a>
-                </div>
-            </li>
-            <li>
-                <div class="card-wide" style="background-image: url('/Content/img/img-2.jpg')">
-                    <a href="">
-                        <div class="card-content">
-                            <h3 class="card-title">El hotel con mas lujos</h3>
-                        </div>
-                    </a>
-                </div>
-            </li>
-            <li>
-                <div class="card-wide" style="background-image: url('/Content/img/img-3.jpg')">
-                    <a href="">
-                        <div class="card-content">
-                            <h3 class="card-title">El hotel con mas lujos</h3>
-                        </div>
-                    </a>
-                </div>
-            </li>
-            <li>
-                <div class="card-wide" style="background-image: url('/Content/img/img-1.jpg')">
-                    <a href="">
-                        <div class="card-content">
-                            <h3 class="card-title">Ahorra hasta un 50%</h3>
-                        </div>
-                    </a>
-                </div>
-            </li>
-            <li>
-                <div class="card-wide" style="background-image: url('/Content/img/img-2.jpg')">
-                    <a href="">
-                        <div class="card-content">
-                            <h3 class="card-title">Gana una noche gratis</h3>
-                        </div>
-                    </a>
-                </div>
-            </li>
-            <li>
-                <div class="card-wide" style="background-image: url('/Content/img/img-3.jpg')">
-                    <a href="">
-                        <div class="card-content">
-                            <h3 class="card-title">El hotel con mas lujos</h3>
-                        </div>
-                    </a>
-                </div>
-            </li>
+            @foreach (var offer in Model.Offers)
+            {
+                <li>
+                    <div class="card-wide" style="background-image: url('@offer.ImagePath')">
+                        <a href="/offers/@UrlHelperExtetions.SeoUrl(offer.Id, offer.Title)">
+                            <div class="card-content">
+                                <h3 class="card-title">@offer.Title</h3>
+                            </div>
+                        </a>
+                    </div>
+                </li>  
+            }
         </ul>
         <div class="prev prev-1">
             <span class="fa fa-angle-left"></span>

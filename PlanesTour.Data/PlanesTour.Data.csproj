@@ -58,6 +58,10 @@
     <Compile Include="Migrations\201603112312066_renameOffertTable.Designer.cs">
       <DependentUpon>201603112312066_renameOffertTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201605131615109_AddTitleFieldToOffer.cs" />
+    <Compile Include="Migrations\201605131615109_AddTitleFieldToOffer.Designer.cs">
+      <DependentUpon>201605131615109_AddTitleFieldToOffer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="PlanesTourDbContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -78,6 +82,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201603112312066_renameOffertTable.resx">
       <DependentUpon>201603112312066_renameOffertTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201605131615109_AddTitleFieldToOffer.resx">
+      <DependentUpon>201605131615109_AddTitleFieldToOffer.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

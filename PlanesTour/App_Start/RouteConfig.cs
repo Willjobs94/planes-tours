@@ -11,6 +11,13 @@ namespace PlanesTour
             routes.LowercaseUrls = true;
 
             routes.MapRoute(
+                name: "offer",
+                url: "offers/{url}",
+                defaults: new {controller = "Offer", action = "Detail"},
+                constraints: new {url = @"\d+[a-z-A-Z-]+"}
+            );
+
+            routes.MapRoute(
                 name: "hotel",
                 url: "hotels/{url}",
                 defaults: new {controller = "Hotel", action = "Detail"},

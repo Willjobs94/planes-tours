@@ -11,6 +11,12 @@ namespace PlanesTour
             routes.LowercaseUrls = true;
 
             routes.MapRoute(
+                name: "about",
+                url: "about",
+                defaults: new {controller = "Home", action = "About"}
+            );
+
+            routes.MapRoute(
                 name: "offer",
                 url: "offers/{url}",
                 defaults: new {controller = "Offer", action = "Detail"},
@@ -27,7 +33,7 @@ namespace PlanesTour
             routes.MapRoute(
                 name: "Defautl hotel route",
                 url: "hotels/{action}",
-                defaults: new {controller = "hotel", action = "index"}
+                defaults: new {controller = "Hotel", action = "Index"}
             );
 
             routes.MapRoute(
@@ -40,7 +46,7 @@ namespace PlanesTour
             routes.MapRoute(
                 name: "Default location route",
                 url: "locations/{action}",
-                defaults: new { controller = "Location", action = "index" }
+                defaults: new { controller = "Location", action = "Index" }
             );
 
             routes.MapRoute(

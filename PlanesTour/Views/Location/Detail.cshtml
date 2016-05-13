@@ -1,12 +1,12 @@
 ﻿@using PlanesTour.Helpers
 @model IEnumerable<PlanesTour.Core.Domain.Hotel>
 @{
-    ViewBag.Title = "Detail";
+    ViewBag.Title = "Detail - ";
 }
 
 
-<!-- Content -->
-<main class="page-content">
+   <!-- Content -->
+<main>
     <section>
         <div class="container">
             <div class="row text-center">
@@ -18,31 +18,49 @@
                 </div>
             </div>
             <div class="row">
+                @{
+                    var i = 0;
+                } 
                 @foreach (var hotel in Model)
                 {
                     <div class="col-md-6">
                         <figure class="card-simple card-location-detail">
-                            <a href="/hotels/@UrlHelperExtetions.SeoUrl(hotel.Id, hotel.Name)">
-                                <div class="card-img" style="background-image: url('@hotel.Photos.FirstOrDefault().Path')">
-                                    <div class="card-img-obfuscar">
-                                        <span class="fa fa-arrow-circle-right fa-3x"></span>
-                                    </div>
+                            <a href="/hotels/@UrlHelperExtetions.SeoUrl(hotel.Id, hotel.Name)" class="card-img" style="background-image: url('@hotel.Photos.FirstOrDefault().Path')">
+                                <div class="card-img-obfuscar">
+                                    <span class="fa fa-arrow-circle-right fa-3x"></span>
                                 </div>
                             </a>
                             <figcaption>
-                                <h4 class="card-title">@hotel.Name</h4>
-                                <p class="text-gray">@hotel.Description</p>
-                                <div class="star-rater">
-                                    <span class="fa fa-star rating"></span>
-                                    <span class="fa fa-star rating"></span>
-                                    <span class="fa fa-star rating"></span>
-                                    <span class="fa fa-star rating"></span>
-                                    <span class="fa fa-star"></span>
+                                <div class="card-location-detail-title">
+                                    <a href="/hotels/@UrlHelperExtetions.SeoUrl(hotel.Id, hotel.Name)"> <h4 class="card-title">@hotel.Name</h4></a>
+                                    <div class="star-rater">
+                                        <span class="fa fa-star rating"></span>
+                                        <span class="fa fa-star rating"></span>
+                                        <span class="fa fa-star rating"></span>
+                                        <span class="fa fa-star rating"></span>
+                                        <span class="fa fa-star"></span>
+                                    </div>
+                                </div>
+                                <div class="card-location-detail-one">
+                                    <div class="card-location-detail-item">
+                                        <span class="counter">Desde<strong>US$200.00</strong></span>
+                                    </div>
+                                    <div class="card-location-detail-item hidden-xs">
+                                        <span class="counter"><strong>30</strong>Visitas</span>
+                                    </div>
+                                </div>
+                                <div class="card-location-detail-two">
+                                    <a href="" class="btn btn-primary btn-xl btn-block">Reservar</a>
                                 </div>
                             </figcaption>
                         </figure>
-
                     </div>
+                    i++;
+                    if (i%2 == 0)
+                    {
+                        @:</div>
+                        @:<div class="row">
+                    }
                 }
             </div>
         </div>

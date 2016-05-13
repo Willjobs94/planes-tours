@@ -17,11 +17,6 @@ namespace PlanesTour.Controllers
             return View();
         }
 
-        public ActionResult LocationIndex()
-        {
-            return View();
-        }
-
         private readonly ILocationService _locationService;
         private readonly IHotelService _hotelService;
         private readonly IOffertService _offertService;

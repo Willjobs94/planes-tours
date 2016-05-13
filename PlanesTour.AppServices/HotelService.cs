@@ -13,6 +13,12 @@ namespace PlanesTour.AppServices
             _hotelRepository = hotelRespository;
         }
 
+        public Hotel GetHotelById(int id)
+            => _hotelRepository.GetHotelById(id);
+
+        public Hotel GetHotelByIdWithPhotos(int id)
+            => _hotelRepository.GetHotelByIdWithPhotos(id);
+
         public IEnumerable<Hotel> GetAllHotelsWithPhotos(int amount)
             => _hotelRepository.GetAllHotelsWithPhotos(amount);
 

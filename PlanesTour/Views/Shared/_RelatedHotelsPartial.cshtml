@@ -1,0 +1,21 @@
+﻿@using PlanesTour.Helpers
+@model IEnumerable<PlanesTour.Core.Domain.Hotel>
+<h4>Hoteles relacionados</h4>
+<div class="">
+    <ul class="related-hotels list-unstyled">
+        @foreach (var hotel in Model)
+        {
+            <li>
+                <div class="related-hotels-item">
+                    <a href="/hotels/@UrlHelperExtetions.SeoUrl(hotel.Id, hotel.Name)" class="item-img" style="background-image: url('@hotel.Photos.FirstOrDefault().Path')"></a>
+                    <div class="item-content">
+                        <h5><a href="/hotel/detail/@hotel.Id">@hotel.Name</a></h5>
+                        <span class="text-gray">@hotel.Location.Name</span>
+                        <br>
+                        <span class="badge badge-price">Desde US$200.00</span>
+                    </div>
+                </div>
+            </li>
+        }
+    </ul>
+</div>

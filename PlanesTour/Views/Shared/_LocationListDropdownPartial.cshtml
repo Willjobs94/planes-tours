@@ -1,0 +1,14 @@
+﻿@using PlanesTour.Helpers
+@model IEnumerable<PlanesTour.Core.Domain.Location>
+<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+    Destinos <span class="caret"></span>
+</a>
+<ul class="dropdown-menu">
+    @foreach (var location in Model)
+    {
+        <li>
+            <a href="/locations/@UrlHelperExtetions.SeoUrl(location.Id, location.Name)">@location.Name</a>
+        </li>
+       
+    }
+</ul>

@@ -1,4 +1,5 @@
-﻿@model IEnumerable<PlanesTour.Core.Domain.Location>
+﻿@using PlanesTour.Helpers
+@model IEnumerable<PlanesTour.Core.Domain.Location>
 
 <main class="page-content">
     <!-- Location List -->
@@ -10,7 +11,7 @@
                 <div class="col-md-4">
                     <figure class="card-simple card-location">
                         <h3 class="card-title">@location.Name</h3>
-                        <a href="/locations/@location.Id" >
+                        <a href="/locations/@UrlHelperExtetions.SeoUrl(location.Id, location.Name)" >
                             <div class="card-img" style="background-image: url('@location.Photos.FirstOrDefault().Path')">
                                 <div class="card-img-obfuscar">
                                     <span class="fa fa-arrow-circle-right fa-3x"></span>

@@ -5,7 +5,8 @@ namespace PlanesTour.AppServices.Contracts
 {
     public interface ILocationService
     {
-        IEnumerable<Location> GetAllLocationsWithPhotos();
         Location GetLocationById(int? locationId);
+        IEnumerable<Location> GetAllLocations();
+        IEnumerable<Location> GetAllLocationsWithPhotos();
     }
 }

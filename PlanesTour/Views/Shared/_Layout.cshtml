@@ -45,13 +45,13 @@
                 <div class="col-sm-6 hidden-xs text-right">
                     <div class="header-lead">
                         <span class="fa fa-phone"></span> Teléfono: (809) 596 8598
-                        <div>
-                            <div class="header-lead">
-                                <span class="fa fa-whatsapp"></span> Whatsapp: (829) 927 4596
-                            </div>
-                        </div>
+                    </div>
+                    <div class="header-lead">
+                        <span class="fa fa-whatsapp"></span> Whatsapp: (829) 927 4596
                     </div>
                 </div>
+                </div>
+            </div>
     </header>
 
 
@@ -71,20 +71,7 @@
                         <a href="~/">Inicio</a>
                     </li>
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                            Destinos <span class="caret"></span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a href="#">Santo Domingo</a>
-                            </li>
-                            <li>
-                                <a href="#">Santiago</a>
-                            </li>
-                            <li>
-                                <a href="#">Punta Cana</a>
-                            </li>
-                        </ul>
+                       @Html.Action("GetLocations", "Location")
                     </li>
                     <li>
                         <a href="#">Acerca de nosotros</a>

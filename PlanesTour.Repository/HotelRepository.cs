@@ -13,8 +13,18 @@ namespace PlanesTour.Repository
         public Hotel GetHotelById(int hotelId)
             => GetById(hotelId);
 
+        public Hotel GetHotelByIdWithPhotos(int hotelId)
+        {
+            var hotel = GetById(hotelId);
+            hotel.Photos = Context.HotelPhotos
+                .Where(a => a.HotelId == hotel.Id)
+                .Select(b => b.Photo).ToList();
+            return hotel;
+        }
+
         public IEnumerable<Hotel> GetAllHotels()
-            => GetAll().Include(a => a.Location).OrderByDescending(a => a.Name);
+            => GetAll().Include(a => a.Location)
+                .OrderByDescending(a => a.Name);
 
         private IEnumerable<Hotel> GetAllHotels(int amount)
             => GetAll().Take(amount).Include(a => a.Location)

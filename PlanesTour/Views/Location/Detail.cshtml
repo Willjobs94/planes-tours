@@ -1,4 +1,5 @@
-﻿@model IEnumerable<PlanesTour.Core.Domain.Hotel>
+﻿@using PlanesTour.Helpers
+@model IEnumerable<PlanesTour.Core.Domain.Hotel>
 @{
     ViewBag.Title = "Detail";
 }
@@ -21,7 +22,7 @@
                 {
                     <div class="col-md-6">
                         <figure class="card-simple card-location-detail">
-                            <a href="">
+                            <a href="/hotels/@UrlHelperExtetions.SeoUrl(hotel.Id, hotel.Name)">
                                 <div class="card-img" style="background-image: url('@hotel.Photos.FirstOrDefault().Path')">
                                     <div class="card-img-obfuscar">
                                         <span class="fa fa-arrow-circle-right fa-3x"></span>

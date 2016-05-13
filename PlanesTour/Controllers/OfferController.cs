@@ -10,9 +10,9 @@ namespace PlanesTour.Controllers
 {
     public class OfferController : Controller
     {
-        public OfferController(IOffertService offertService, IHotelService hotelService)
+        public OfferController(IOfferService offerService, IHotelService hotelService)
         {
-            _offertService = offertService;
+            _offerService = offerService;
             _hotelService = hotelService;
         }
         // GET: Offer
@@ -26,13 +26,13 @@ namespace PlanesTour.Controllers
 
             var viewModel = new ViewModels.Offer.Detail
             {
-                Offer = _offertService.GetOfferById(offerId),
+                Offer = _offerService.GetOfferById(offerId),
                 RelatedHotels = _hotelService.GetAllHotelsWithPhotos(5)
             };
             return View(viewModel);
         }
 
-        private readonly IOffertService _offertService;
+        private readonly IOfferService _offerService;
         private readonly IHotelService _hotelService;
     }
 }

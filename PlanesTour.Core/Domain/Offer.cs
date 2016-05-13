@@ -17,7 +17,7 @@ namespace PlanesTour.Core.Domain
         public int HotelId { get; set; }
 
         /// <summary>
-        /// A short description of the offert
+        /// A short description of the offer
         /// </summary>
         [MaxLength(200)]
         public string Description { get; set; }
@@ -28,17 +28,17 @@ namespace PlanesTour.Core.Domain
         public DateTime StartDate { get; set; }
 
         /// <summary>
-        /// Indicates when the Offert Expire
+        /// Indicates when the Offer Expire
         /// </summary>
         public DateTime ExpirationDate { get; set; }
 
         /// <summary>
         /// How many cuppuns does this offer have
         /// </summary>
-        public int OffertAmount { get; set; }
+        public int OfferAmount { get; set; }
 
         /// <summary>
-        /// The Image Path of the Offert
+        /// The Image Path of the Offer
         /// </summary>
         [MaxLength(254)]
         public string ImagePath { get; set; }

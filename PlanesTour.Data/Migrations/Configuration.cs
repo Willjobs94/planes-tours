@@ -22,68 +22,68 @@ namespace PlanesTour.Data.Migrations
 
         protected override void Seed(PlanesTourDbContext context)
         {
-            #region Offert List
+            //#region Offer List
 
-            var offertList = new List<Offer>
-            {
-                new Offer
-                {
-                    Title = "Ahorra hasta un 50% de Descuento",
-                    Description = "This is the best offert you can see",
-                    HotelId = 1,
-                    StartDate = DateTime.Now.AddDays(2),
-                    ExpirationDate = DateTime.Now.AddDays(7),
-                    OffertAmount = 100,
-                    ImagePath = Path.Combine(_imageRootPath, "")
-                },
-                new Offer
-                {
-                    Title = "The best offer",
-                    Description = "This is the second best offert that you will see",
-                    HotelId = 2,
-                    StartDate = DateTime.Now.AddDays(2),
-                    ExpirationDate = DateTime.Now.AddDays(7),
-                    OffertAmount = 100,
-                    ImagePath = Path.Combine(_imageRootPath, "placeholdit400x300.png")
-                },
-                new Offer
-                {
-                    Title = "Another good offer",
-                    Description = "Another Offert",
-                    HotelId = 3,
-                    StartDate = DateTime.Now.AddDays(2),
-                    ExpirationDate = DateTime.Now.AddDays(7),
-                    OffertAmount = 100,
-                    ImagePath = Path.Combine(_imageRootPath, "placeholdit400x300.png")
-                },
-                new Offer
-                {
-                    Title = "Hey this is an offer",
-                    Description = "Another Offert 2",
-                    HotelId = 4,
-                    StartDate = DateTime.Now.AddDays(2),
-                    ExpirationDate = DateTime.Now.AddDays(7),
-                    OffertAmount = 100,
-                    ImagePath = Path.Combine(_imageRootPath, "placeholdit400x300.png")
-                },
-                new Offer
-                {
-                    Title = "Aproveche la oferta",
-                    Description = "Another differten Offert Offert",
-                    HotelId = 5,
-                    StartDate = DateTime.Now.AddDays(2),
-                    ExpirationDate = DateTime.Now.AddDays(7),
-                    OffertAmount = 100,
-                    ImagePath = Path.Combine(_imageRootPath, "placeholdit400x300.png")
-                }
-            };
+            //var offerList = new List<Offer>
+            //{
+            //    new Offer
+            //    {
+            //        Title = "Ahorra hasta un 50% de Descuento",
+            //        Description = "This is the best offer you can see",
+            //        HotelId = 1,
+            //        StartDate = DateTime.Now.AddDays(2),
+            //        ExpirationDate = DateTime.Now.AddDays(7),
+            //        OfferAmount = 100,
+            //        ImagePath = Path.Combine(_imageRootPath, "")
+            //    },
+            //    new Offer
+            //    {
+            //        Title = "The best offer",
+            //        Description = "This is the second best offer that you will see",
+            //        HotelId = 2,
+            //        StartDate = DateTime.Now.AddDays(2),
+            //        ExpirationDate = DateTime.Now.AddDays(7),
+            //        OfferAmount = 100,
+            //        ImagePath = Path.Combine(_imageRootPath, "placeholdit400x300.png")
+            //    },
+            //    new Offer
+            //    {
+            //        Title = "Another good offer",
+            //        Description = "Another offer",
+            //        HotelId = 3,
+            //        StartDate = DateTime.Now.AddDays(2),
+            //        ExpirationDate = DateTime.Now.AddDays(7),
+            //        OfferAmount = 100,
+            //        ImagePath = Path.Combine(_imageRootPath, "placeholdit400x300.png")
+            //    },
+            //    new Offer
+            //    {
+            //        Title = "Hey this is an offer",
+            //        Description = "Another offer 2",
+            //        HotelId = 4,
+            //        StartDate = DateTime.Now.AddDays(2),
+            //        ExpirationDate = DateTime.Now.AddDays(7),
+            //        OfferAmount = 100,
+            //        ImagePath = Path.Combine(_imageRootPath, "placeholdit400x300.png")
+            //    },
+            //    new Offer
+            //    {
+            //        Title = "Aproveche la oferta",
+            //        Description = "Another differten offer offer",
+            //        HotelId = 5,
+            //        StartDate = DateTime.Now.AddDays(2),
+            //        ExpirationDate = DateTime.Now.AddDays(7),
+            //        OfferAmount = 100,
+            //        ImagePath = Path.Combine(_imageRootPath, "placeholdit400x300.png")
+            //    }
+            //};
 
-            foreach (var offert in offertList)
-            {
-                context.Offerts.AddOrUpdate(a => a.Title, offert);
-            }
+            //foreach (var offer in offerList)
+            //{
+            //    context.Offers.AddOrUpdate(a => a.Title, offer);
+            //}
 
-            #endregion
+            //#endregion
 
             //#region Photo List
 

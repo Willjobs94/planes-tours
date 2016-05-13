@@ -7,7 +7,7 @@ namespace PlanesTour.AppServices
 {
     public class AdminService : IAdminService 
     {
-        public AdminService( IHotelRepository hotelRepository, IOffertRepository offertRepository, ILocationRepository locationRepository)
+        public AdminService( IHotelRepository hotelRepository, IOfferRepository offertRepository, ILocationRepository locationRepository)
         {
             _hotelRepository = hotelRepository;
             _locationRepository = locationRepository;
@@ -33,7 +33,7 @@ namespace PlanesTour.AppServices
             return _offertRepository.GetAllOffers();
         } 
         private readonly IHotelRepository _hotelRepository;
-        private readonly IOffertRepository _offertRepository;
+        private readonly IOfferRepository _offertRepository;
         private readonly ILocationRepository _locationRepository;
     } 
 }

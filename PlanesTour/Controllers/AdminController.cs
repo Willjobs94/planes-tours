@@ -5,11 +5,11 @@ namespace PlanesTour.Controllers
 {
     public class AdminController : Controller
     {
-        public AdminController( ILocationService locationService, IHotelService hotelService, IOffertService offertService)
+        public AdminController( ILocationService locationService, IHotelService hotelService, IOfferService offerService)
         {
             _hotelService = hotelService;
             _locationService = locationService;
-            _offertService = offertService;
+            _offerService = offerService;
         }
         // GET: Admin
         public ActionResult Index()
@@ -19,7 +19,7 @@ namespace PlanesTour.Controllers
 
         private readonly ILocationService _locationService;
         private readonly IHotelService _hotelService;
-        private readonly IOffertService _offertService;
+        private readonly IOfferService _offerService;
 
     }
 }

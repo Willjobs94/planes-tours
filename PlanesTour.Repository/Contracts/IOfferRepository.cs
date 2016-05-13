@@ -2,7 +2,7 @@
 using PlanesTour.Core.Domain;
 namespace PlanesTour.Repository.Contracts
 {
-    public interface IOffertRepository : IBaseRepository<Offer>
+    public interface IOfferRepository : IBaseRepository<Offer>
     {
 
         Offer GetOfferById(int offerId); 

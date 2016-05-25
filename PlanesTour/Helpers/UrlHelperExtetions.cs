@@ -24,7 +24,7 @@ namespace PlanesTour.Helpers
         /// </summary>
         /// <param name="strToSanitize"></param>
         /// <returns></returns>
-        public static string SanitizeUrl(this string strToSanitize)
+        public static string SanitizeString(this string strToSanitize)
         {
             return strToSanitize == null
                 ? null
@@ -39,7 +39,7 @@ namespace PlanesTour.Helpers
         /// <returns></returns>
         public static string SeoUrl(int id, string title)
         {
-            return string.IsNullOrEmpty(title) ? id.ToString() : $"{id}-{SanitizeUrl(title)}";
+            return string.IsNullOrEmpty(title) ? id.ToString() : $"{id}-{SanitizeString(title)}";
         }
 
     }

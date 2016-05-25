@@ -10,7 +10,7 @@
                         <h3 class="hotel-detail-title">@Model.Hotel.Name</h3>
                         <ul class="hotel-detail-meta list-unstyled">
                             <li>
-                                Destino: <a href="/locations/@UrlHelperExtetions.SeoUrl(Model.Hotel.LocationId, Model.Hotel.Location.Name.SanitizeUrl())" 
+                                Destino: <a href="/locations/@UrlHelperExtetions.SeoUrl(Model.Hotel.LocationId, Model.Hotel.Location.Name.SanitizeString())" 
                                             class="text-gray">@Model.Hotel.Location.Name</a>
                             </li>
                             <li>

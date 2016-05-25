@@ -16,6 +16,8 @@ namespace PlanesTour.Repository
         public Hotel GetHotelByIdWithPhotos(int hotelId)
         {
             var hotel = GetById(hotelId);
+            hotel.Location = Context.Locations
+                .FirstOrDefault(a => a.Id == hotel.LocationId);
             hotel.Photos = Context.HotelPhotos
                 .Where(a => a.HotelId == hotel.Id)
                 .Select(b => b.Photo).ToList();

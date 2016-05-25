@@ -28,6 +28,9 @@
     <!-- Custom CSS -->
     <link href="~/Content/styles.css" rel="stylesheet">
 
+    <!-- JQuery -->
+    @Scripts.Render("~/bundles/jquery")
+
 </head>
 <body>
 
@@ -38,7 +41,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-6">
-                    <a href="" class="logo">
+                    <a href="/" class="logo">
                         <img src="/Content/img/logo.png" alt="Brand">
                     </a>
                 </div>
@@ -127,8 +130,6 @@
     </footer>
 
     @RenderSection("scripts", required: false)
-    <!-- JQuery -->
-    @Scripts.Render("~/bundles/jquery")
 
     <!-- Bootstrap JS -->
     @Scripts.Render("~/bundles/bootstrap")

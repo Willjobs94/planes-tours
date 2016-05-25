@@ -120,6 +120,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Abstractions" />
     <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -180,6 +181,7 @@
     <Compile Include="ViewModels\Error\Error.cs" />
     <Compile Include="ViewModels\Home\Index.cs" />
     <Compile Include="ViewModels\Hotel\Detail.cs" />
+    <Compile Include="ViewModels\Hotel\New.cs" />
     <Compile Include="ViewModels\Location\Index.cs" />
     <Compile Include="ViewModels\Offer\Detail.cs" />
   </ItemGroup>
@@ -203,6 +205,9 @@
     <Content Include="Assets\Photos\Hotels\hodelpa-garden-suite\01.jpg" />
     <Content Include="Assets\Photos\Hotels\hotel-barcelo-deluxe-paradise\01.jpg" />
     <Content Include="Assets\Photos\Hotels\hotel-barcelo-palace-deluxe\01.jpg" />
+    <Content Include="Assets\Photos\Hotels\hotel-glorioso\Pasted image at 2016_03_05 09_18 PM.png" />
+    <Content Include="Assets\Photos\Hotels\hotel-glorioso\Pasted image at 2016_03_06 09_26 AM.png" />
+    <Content Include="Assets\Photos\Hotels\hotel-glorioso\Sin-título-2.png" />
     <Content Include="Assets\Photos\Hotels\iberoestar-costa-dorada\01.jpg" />
     <Content Include="Assets\Photos\Hotels\iberoestar-hacienda\01.jpg" />
     <Content Include="Assets\Photos\Hotels\lifestyle-tropical-beach\01.jpg" />
@@ -215,10 +220,12 @@
     <Content Include="Assets\Photos\Locations\juan-dolio\01.jpg" />
     <Content Include="Assets\Photos\Locations\puerto-plata\01.jpg" />
     <Content Include="Assets\Photos\Locations\punta-cana\01.png" />
+    <Content Include="Content\bootstrap-select.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\fine-uploader-new.css" />
     <Content Include="Content\font-awesome\css\font-awesome.css" />
     <Content Include="Content\font-awesome\css\font-awesome.min.css" />
     <Content Include="Content\font-awesome\fonts\fontawesome-webfont.svg" />
@@ -242,6 +249,7 @@
     <Content Include="Global.asax" />
     <Content Include="Scripts\ai.0.15.0-build58334.js" />
     <Content Include="Scripts\ai.0.15.0-build58334.min.js" />
+    <Content Include="Scripts\bootstrap-select.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
@@ -262,6 +270,7 @@
     <None Include="Scripts\jquery-2.2.1-vsdoc.js" />
     <Content Include="Scripts\jquery-2.2.1.js" />
     <Content Include="Scripts\jquery-2.2.1.min.js" />
+    <Content Include="Scripts\jquery.fine-uploader.js" />
     <Content Include="Scripts\jquery.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jquery.validate.js" />
@@ -303,6 +312,7 @@
     <Content Include="Views\Shared\_LocationListDropdownPartial.cshtml" />
     <Content Include="Views\Offer\Detail.cshtml" />
     <Content Include="Views\Error\Index.cshtml" />
+    <Content Include="Views\Hotel\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

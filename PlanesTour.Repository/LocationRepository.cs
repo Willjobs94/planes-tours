@@ -8,7 +8,7 @@ namespace PlanesTour.Repository
 {
     public class LocationRepository : BaseRepository<Location>, ILocationRepository
     {
-        public LocationRepository(PlanesTourDbContext context) : base(context) { }
+        public LocationRepository(IUnitOfWork unitOfWork) : base(unitOfWork) { }
 
         public IEnumerable<Location> GetAllLocations() => GetAll();
 

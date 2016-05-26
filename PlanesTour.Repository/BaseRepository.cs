@@ -6,14 +6,14 @@ using System.Linq;
 namespace PlanesTour.Repository
 {
     public class BaseRepository<T> : IBaseRepository<T> where  T : class
-    {
+    {  
         protected readonly PlanesTourDbContext Context;
         protected readonly DbSet<T> DbSet;
 
-        public BaseRepository(PlanesTourDbContext context)
+        public BaseRepository(IUnitOfWork unitOfWork)
         {
-            Context = context;
-            DbSet = context.Set<T>();
+            Context = unitOfWork.Context;
+            DbSet = unitOfWork.Context.Set<T>();
         }
 
         protected T GetById(int? id)

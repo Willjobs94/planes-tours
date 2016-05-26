@@ -8,9 +8,9 @@ namespace PlanesTour.AppServices
 {
     public class LocationService : ILocationService
     {
-        public LocationService(ILocationRepository locationRepository)
+        public LocationService(IUnitOfWork unitOfWork)
         {
-            _locationRepository = locationRepository;
+            _locationRepository = unitOfWork.LocationRepository;
         }
 
         public IEnumerable<Location>GetAllLocations() 

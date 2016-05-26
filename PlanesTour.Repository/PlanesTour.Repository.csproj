@@ -54,6 +54,8 @@
     <Compile Include="Contracts\IHotelRepository.cs" />
     <Compile Include="Contracts\ILocationRepository.cs" />
     <Compile Include="Contracts\IOfferRepository.cs" />
+    <Compile Include="Contracts\IUnitOfWork.cs" />
+    <Compile Include="EntityFrameworkUnitOfWork.cs" />
     <Compile Include="HotelRepository.cs" />
     <Compile Include="LocationRepository.cs" />
     <Compile Include="OfferRepository.cs" />

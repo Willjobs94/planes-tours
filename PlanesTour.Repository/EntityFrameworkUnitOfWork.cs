@@ -1,33 +1,38 @@
-﻿using PlanesTour.Data;
+﻿using PlanesTour.Core.Domain;
+using PlanesTour.Data;
 using PlanesTour.Repository.Contracts;
 
 namespace PlanesTour.Repository
 {
     public class EntityFrameworkUnitOfWork : IUnitOfWork
     {
-        public EntityFrameworkUnitOfWork(PlanesTourDbContext context)
+        public EntityFrameworkUnitOfWork(IRepositoryFactory repositoryFactory, PlanesTourDbContext context)
         {
+            _repositoryFactory = repositoryFactory;
             Context = context;
         }
 
+        private readonly IRepositoryFactory _repositoryFactory;
+
         public PlanesTourDbContext Context { get; }
 
-        public void SaveChanges()
+        public IHotelRepository HotelRepository
+            => (IHotelRepository)BuildRepository<Hotel>();
+
+        public ILocationRepository LocationRepository 
+            => (ILocationRepository)BuildRepository<Location>();
+
+        public IOfferRepository OfferRepository 
+            => (IOfferRepository)BuildRepository<Offer>();
+
+        private IBaseRepository<T> BuildRepository<T>() where T : class
+        {
+            return _repositoryFactory.BuildRepository<T>();
+        }
+
+        public void Commit()
         {
             Context.SaveChanges();
         }
-
-        public IHotelRepository HotelRepository 
-            => _hotelRepository ?? new HotelRepository(this);
-
-        public ILocationRepository LocationRepository 
-            => _locationRepository ?? new LocationRepository(this);
-
-        public IOfferRepository OfferRepository
-            => _offerRepository ?? new OfferRepository(this);
-
-        private readonly IHotelRepository _hotelRepository;
-        private readonly ILocationRepository _locationRepository;
-        private readonly IOfferRepository _offerRepository;
     }
 }

@@ -3,14 +3,15 @@ using System.Linq;
 using PlanesTour.AppServices.Contracts;
 using PlanesTour.Repository.Contracts;
 using PlanesTour.Core.Domain;
+using PlanesTour.Repository;
 
 namespace PlanesTour.AppServices
 {
     public class LocationService : ILocationService
     {
-        public LocationService(IUnitOfWork unitOfWork)
+        public LocationService(ILocationRepository locationRepository)
         {
-            _locationRepository = unitOfWork.LocationRepository;
+            _locationRepository = locationRepository;
         }
 
         public IEnumerable<Location>GetAllLocations() 

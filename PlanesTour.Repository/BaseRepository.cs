@@ -10,7 +10,7 @@ namespace PlanesTour.Repository
         protected readonly PlanesTourDbContext Context;
         protected readonly DbSet<T> DbSet;
 
-        public BaseRepository(IUnitOfWork unitOfWork)
+        protected BaseRepository(IUnitOfWork unitOfWork)
         {
             Context = unitOfWork.Context;
             DbSet = unitOfWork.Context.Set<T>();

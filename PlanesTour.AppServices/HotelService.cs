@@ -8,9 +8,9 @@ namespace PlanesTour.AppServices
     // ReSharper disable once ClassNeverInstantiated.Global
     public class HotelService : IHotelService
     {
-        public HotelService(IUnitOfWork unitOfWork)
+        public HotelService(IHotelRepository hotelRepository)
         {
-            _hotelRepository = unitOfWork.HotelRepository;
+            _hotelRepository = hotelRepository;
         }
 
         public Hotel GetHotelById(int id)

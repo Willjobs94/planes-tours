@@ -6,7 +6,7 @@ namespace PlanesTour.Repository
 {
     public class OfferRepository : BaseRepository<Offer>, IOfferRepository
     {
-        public OfferRepository(PlanesTourDbContext context) : base(context) { }
+        public OfferRepository(IUnitOfWork unitOfWork) : base(unitOfWork) { }
 
         public Offer GetOfferById(int offerId) 
             => GetById(offerId);

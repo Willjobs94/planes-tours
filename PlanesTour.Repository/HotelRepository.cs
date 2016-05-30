@@ -8,7 +8,7 @@ namespace PlanesTour.Repository
 {
     public class HotelRepository : BaseRepository<Hotel>, IHotelRepository
     {
-        public HotelRepository(PlanesTourDbContext context) : base(context) { }
+        public HotelRepository(IUnitOfWork unitOfWork) : base(unitOfWork) { }
 
         public Hotel GetHotelById(int hotelId)
             => GetById(hotelId);

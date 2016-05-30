@@ -7,11 +7,12 @@ namespace PlanesTour.AppServices
 {
     public class AdminService : IAdminService 
     {
-        public AdminService( IHotelRepository hotelRepository, IOfferRepository offertRepository, ILocationRepository locationRepository)
+        public AdminService( IHotelRepository hotelRepository, 
+            ILocationRepository locationRepository, IOfferRepository offerRepository)
         {
             _hotelRepository = hotelRepository;
             _locationRepository = locationRepository;
-            _offertRepository = offertRepository;
+            _offertRepository = offerRepository;
         }
         public IEnumerable<Hotel> GetAllHotels() 
         {

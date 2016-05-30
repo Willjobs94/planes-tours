@@ -3,6 +3,7 @@ using System.Linq;
 using PlanesTour.AppServices.Contracts;
 using PlanesTour.Repository.Contracts;
 using PlanesTour.Core.Domain;
+using PlanesTour.Repository;
 
 namespace PlanesTour.AppServices
 {

@@ -13,19 +13,21 @@ namespace PlanesTour.App_Start
     {
         public override void Load()
         {
-            //Kernel.Bind<PlanesTourDbContext>().ToSelf().InRequestScope();
-
+            Kernel.Bind<IPhotoManager>().To<PhotoManager>();
             Kernel.Bind<IUnitOfWork>().To<EntityFrameworkUnitOfWork>().InRequestScope();
             Kernel.Bind<IRepositoryFactory>().To<RepositoryFactory>();
 
             Kernel.Bind<IHotelRepository>().To<HotelRepository>();
             Kernel.Bind<ILocationRepository>().To<LocationRepository>();
             Kernel.Bind<IOfferRepository>().To<OfferRepository>();
+            Kernel.Bind<IPhotoRepository>().To<PhotoRepository>();
+            Kernel.Bind<IHotelPhotoRepository>().To<HotelPhotoRepository>();
 
             Kernel.Bind<IHotelService>().To<HotelService>();
             Kernel.Bind<IOfferService>().To<OfferService>();
             Kernel.Bind<ILocationService>().To<LocationService>();
 
+            
             //throw new NotImplementedException();
         }
     }
